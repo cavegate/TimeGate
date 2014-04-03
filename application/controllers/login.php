@@ -24,6 +24,11 @@ class Login extends CI_Controller {
             $this->load->view('login');
             $this->load->view('footer');
         }
+        else
+        {
+            $this->load->helper('url');
+            redirect('/welcome/','refresh');
+        }
     }
 }
 
