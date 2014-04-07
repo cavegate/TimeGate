@@ -13,3 +13,5 @@ $lang["login_username"] = "نام کاربری";
 $lang["login_password"] = "کلمه عبور";
 $lang["login_captcha"] = "عبارت امنیتی";
 $lang["login_login"] = "ورود";
+$lang["login_header_meta_description"] = "صفحه ورود کاربران نرم افزار دروازه زمان";
+$lang["website_header"] = "پرتال مدیریت زمان";

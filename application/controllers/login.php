@@ -20,9 +20,21 @@ class Login extends CI_Controller {
         $username = $this->session->userdata('username');
         if($username == FALSE)
         {
-            $this->load->view('header');
+            $this->load->helper('url');
+            if(LANGUAGE == "en")
+                $this->lang->load('en','english');
+            else if(LANGUAGE == "fa")
+                $this->lang->load('fa','persian');
+            $headerPassedArray = array(
+                "header_meta_description" => $this->lang->line("login_header_meta_description"),
+                "title" => $this->lang->line("login_title"),
+                "website_header" => $this->lang->line("website_header"),
+                "is_login" => TRUE,
+                "LANGUAGE" => LANGUAGE
+            );
+            $this->load->view('header',$headerPassedArray);
             $this->load->view('login');
-            $this->load->view('footer');
+            //$this->load->view('footer');
         }
         else
         {
