@@ -1,31 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="11f289a2-6249-40d7-9948-31a8c343755f" name="Default" comment="The fisrt configuration of TimeGate codeigniter">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/256x256.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/256x256_Clock_alt.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/256x256_clock.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/apple-touch-icon-114x114.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/apple-touch-icon-72x72.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/apple-touch-icon.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/favicon.ico" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/logo-original-farsi.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/logo-original.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/pattern.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/pattern.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/pattern2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/css/custom.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/language/english/en_lang.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/application/views/login.php" />
-      <change type="DELETED" beforePath="F:\New D\Creative\XAMPP\TimeGate\css\base.css" afterPath="" />
-      <change type="DELETED" beforePath="F:\New D\Creative\XAMPP\TimeGate\css\layout.css" afterPath="" />
-      <change type="DELETED" beforePath="F:\New D\Creative\XAMPP\TimeGate\css\prettyPhoto.css" afterPath="" />
-      <change type="DELETED" beforePath="F:\New D\Creative\XAMPP\TimeGate\css\skeleton.css" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/config.php" afterPath="$PROJECT_DIR$/application/config/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/config/constants.php" afterPath="$PROJECT_DIR$/application/config/constants.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/language/persian/fa_lang.php" afterPath="$PROJECT_DIR$/application/language/persian/fa_lang.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/header.php" afterPath="$PROJECT_DIR$/application/views/header.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/controllers/login.php" afterPath="$PROJECT_DIR$/application/controllers/login.php" />
+    <list default="true" id="11f289a2-6249-40d7-9948-31a8c343755f" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/pattern-50fo.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/custom.css" afterPath="$PROJECT_DIR$/css/custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/application/views/login.php" afterPath="$PROJECT_DIR$/application/views/login.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TimeGate.iws" />
@@ -70,7 +49,7 @@
       <file leaf-file-name="header.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/header.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="57" column="16" selection-start="2467" selection-end="2467" vertical-scroll-proportion="-6.129032" vertical-offset="888" max-vertical-offset="1540">
+            <state line="57" column="16" selection-start="2467" selection-end="2467" vertical-scroll-proportion="-2.612903" vertical-offset="997" max-vertical-offset="1540">
               <folding>
                 <marker date="1396868797612" expanded="true" signature="2108:2652" placeholder="..." />
                 <marker date="1396868797612" expanded="true" signature="2139:2481" placeholder="..." />
@@ -82,7 +61,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/language/english/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="330">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
               <folding />
             </state>
           </provider>
@@ -91,7 +70,7 @@
       <file leaf-file-name="en_lang.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/language/english/en_lang.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="53" selection-start="480" selection-end="506" vertical-scroll-proportion="-6.387097" vertical-offset="0" max-vertical-offset="330">
+            <state line="16" column="53" selection-start="480" selection-end="506" vertical-scroll-proportion="0.0" vertical-offset="352" max-vertical-offset="484">
               <folding />
             </state>
           </provider>
@@ -100,7 +79,7 @@
       <file leaf-file-name="custom.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/custom.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="23" selection-start="534" selection-end="534" vertical-scroll-proportion="0.7875895" vertical-offset="0" max-vertical-offset="1210">
+            <state line="33" column="22" selection-start="743" selection-end="743" vertical-scroll-proportion="0.52757794" vertical-offset="506" max-vertical-offset="1298">
               <folding />
             </state>
           </provider>
@@ -127,7 +106,7 @@
       <file leaf-file-name="login.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/views/login.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="105" selection-start="756" selection-end="756" vertical-scroll-proportion="-9.419354" vertical-offset="16" max-vertical-offset="572">
+            <state line="24" column="74" selection-start="842" selection-end="852" vertical-scroll-proportion="-5.354839" vertical-offset="186" max-vertical-offset="572">
               <folding />
             </state>
           </provider>
@@ -169,7 +148,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
+    <option name="width" value="1378" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -213,6 +192,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="TimeGate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TimeGate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TimeGate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -333,7 +326,11 @@
       <created>1396529255618</created>
       <updated>1396529255618</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="the login page view is ready">
+      <created>1396895444930</created>
+      <updated>1396895444930</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -357,15 +354,15 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1378" height="744" extended-state="0" />
+    <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22372882" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2244898" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1560606" sideWeight="0.77627116" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15805471" sideWeight="0.7755102" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
@@ -390,7 +387,8 @@
     </option>
     <MESSAGE value="The fisrt configuration of TimeGate" />
     <MESSAGE value="The fisrt configuration of TimeGate codeigniter" />
-    <option name="LAST_COMMIT_MESSAGE" value="The fisrt configuration of TimeGate codeigniter" />
+    <MESSAGE value="the login page view is ready" />
+    <option name="LAST_COMMIT_MESSAGE" value="the login page view is ready" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -459,23 +457,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="105" selection-start="756" selection-end="756" vertical-scroll-proportion="-9.419354" vertical-offset="16" max-vertical-offset="572">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/views/header.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="16" selection-start="2467" selection-end="2467" vertical-scroll-proportion="-6.129032" vertical-offset="888" max-vertical-offset="1540">
-          <folding>
-            <marker date="1396868797612" expanded="true" signature="2108:2652" placeholder="..." />
-            <marker date="1396868797612" expanded="true" signature="2139:2481" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/language/english/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="432">
@@ -485,14 +466,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/language/english/en_lang.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="53" selection-start="480" selection-end="506" vertical-scroll-proportion="-6.387097" vertical-offset="0" max-vertical-offset="330">
+        <state line="16" column="53" selection-start="480" selection-end="506" vertical-scroll-proportion="0.0" vertical-offset="352" max-vertical-offset="484">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="57" column="16" selection-start="2467" selection-end="2467" vertical-scroll-proportion="-2.612903" vertical-offset="997" max-vertical-offset="1540">
+          <folding>
+            <marker date="1396868797612" expanded="true" signature="2108:2652" placeholder="..." />
+            <marker date="1396868797612" expanded="true" signature="2139:2481" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/views/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="74" selection-start="842" selection-end="852" vertical-scroll-proportion="-5.354839" vertical-offset="186" max-vertical-offset="572">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/custom.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="23" selection-start="534" selection-end="534" vertical-scroll-proportion="0.7875895" vertical-offset="0" max-vertical-offset="1210">
+        <state line="33" column="22" selection-start="743" selection-end="743" vertical-scroll-proportion="0.52757794" vertical-offset="506" max-vertical-offset="1298">
           <folding />
         </state>
       </provider>

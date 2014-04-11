@@ -26,9 +26,13 @@
 
 body
 {
-    background-color: lightskyblue;
+    background-image: url('../img/pattern-50fo.png');
 }
 
+.btn-border
+{
+    border: 2px dotted seagreen;
+}
 .middleForm
 {
     text-align: center;
