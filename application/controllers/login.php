@@ -34,13 +34,29 @@ class Login extends CI_Controller {
             );
             $this->load->view('header',$headerPassedArray);
             $this->load->view('login');
-            //$this->load->view('footer');
+            $this->load->view('footer');
         }
         else
         {
             $this->load->helper('url');
             redirect('/welcome/','refresh');
         }
+    }
+
+    function checklogin()
+    {
+        $this->load->model('login_model');
+        $this->load->library('encrypt');
+        echo $this->input->post('password')."<br/>";
+        $encryptedPassword = $this->encrypt->encode($this->input->post('password'));
+        echo $encryptedPassword."<br/>";
+        $decodedPassword = $this->encrypt->decode($encryptedPassword);
+        echo $decodedPassword."<br/>";
+        $sha1Password = $this->encrypt->sha1($encryptedPassword);
+        echo $sha1Password."<br/>";
+        $result = $this->login_model->checkLogin($this->input->post('username'),$sha1Password);
+        print_r($result);
+        die;
     }
 }
 

@@ -51,7 +51,7 @@
 <div class="visible-md">medium</div>
 <div class="visible-lg">large</div>
 <div class="container">
-    <div class="row allHeader">
+    <header class="row allHeader">
         <div class="col-xs-12 col-sm-12 col-md-3<?php if($LANGUAGE == "fa")echo "col-md-push-9";?>">
             <a href="<?php echo base_url();?>">
                 <img class="img-responsive" src="<?php echo base_url();?>img/logo-original<?php if($LANGUAGE == "fa")echo "-farsi";?>.png" alt="TimeGate Logo"/>
@@ -60,10 +60,10 @@
         <div class="headerTitle hidden-xs hidden-sm col-md-9 <?php if($LANGUAGE == "fa")echo "col-md-pull-3";?>">
             <?php echo $website_header;?>
         </div>
-    </div>
+    </header>
 
 <?php
-    if($is_login == FALSE)
+    if($is_login == TRUE)
     {
 ?>
 

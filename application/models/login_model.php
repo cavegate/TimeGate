@@ -6,13 +6,15 @@
  * Time: 12:37 PM
  */
 
-class Model_whois_checker extends CI_Model
+class Login_model extends CI_Model
 {
     public static function checkLogin($username, $password)
     {
-        $ok = "select * from users where username = \''$username'\' and password = \''$password'\'";
-        echo $ok;
-        die;
-        $result = mysql_query("select * from users where username = \''$username'\' and password = \''$password'\'");
+        $queryString = "select * from users where username = '$username' and password = '$password'";
+        echo $queryString."<br/>";
+        $result = mysql_query($queryString);
+        print_r($result);
+        if(count($result)>0)
+            return $result;
     }
 } 

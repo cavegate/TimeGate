@@ -11,19 +11,19 @@
 ?>
 </div>
 <div class="jumbotron">
-<div class="row">
-    <div class="middleForm col-sm-4 col-sm-offset-4">
-        <form role="form">
-            <div class="form-group">
-                <label for="exampleInputEmail1">Username</label>
-                <input type="text" class="form-control" id="username" placeholder="Username goes here">
-            </div>
-            <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="password" placeholder="Password goes here">
-            </div>
-            <button type="submit" class="btn btn-warning btn-lg btn-border">Log me in please</button>
-        </form>
+    <div class="row">
+        <div class="middleForm col-sm-4 col-sm-offset-4">
+            <form role="form" action="<?php echo base_url();?>index.php/login/checklogin/" method="POST">
+                <div class="form-group">
+                    <label for="inputUsername">Username</label>
+                    <input type="text" class="form-control" name="username" placeholder="Username goes here">
+                </div>
+                <div class="form-group">
+                    <label for="inputPassword">Password</label>
+                    <input type="password" class="form-control" name="password" placeholder="Password goes here">
+                </div>
+                <button type="submit" class="btn btn-warning btn-lg btn-border">Log me in please</button>
+            </form>
+        </div>
     </div>
-</div>
 </div>
