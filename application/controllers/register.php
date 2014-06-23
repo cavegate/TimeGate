@@ -43,6 +43,8 @@ class Register extends CI_Controller {
         $email = $this->input->post('email');
         $mobile = $this->input->post('mobile');
         $birthDate = $this->input->post('birth_date');
+
+
         
     }
 }

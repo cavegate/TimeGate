@@ -34,15 +34,16 @@
     <link rel="stylesheet" href="<?php echo base_url();?>css/custom.css" type="text/css"/>
     <link rel="stylesheet" href="<?php echo base_url();?>css/register.css" type="text/css"/>
     <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <!--<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script> -->
+    <!--[endif]-->
 
 
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!--<script src="http://code.jquery.com/jquery-latest.js"></script>-->
     <script src="<?php echo base_url();?>js/jquery.prettyPhoto.js"></script>
     <script src="<?php echo base_url();?>js/jquery.custom.js"></script>
     <script src="<?php echo base_url();?>js/jquery-1.8.2.min.js"></script>
     <script src="<?php echo base_url();?>js/price.js"></script>
+    <script src="<?php echo base_url();?>js/register.js"></script>
 
 
 </head>
