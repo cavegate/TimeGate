@@ -35,8 +35,15 @@ class Register extends CI_Controller {
         $this->load->view('register');
     }
     public function submited_form(){
-        $full_name = $_POST['full_name'];
-
+        $this->load->model("register_model");
+        $fullname =  $this->input->post('full_name');
+        $username =  $this->input->post('username');
+        $password = $this->input->post('password');
+        $conf_password = $this->input->post('conf_password');
+        $email = $this->input->post('email');
+        $mobile = $this->input->post('mobile');
+        $birthDate = $this->input->post('birth_date');
+        
     }
 }
 

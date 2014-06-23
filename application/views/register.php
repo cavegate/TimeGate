@@ -16,28 +16,28 @@
         </div>
         <div class="row form-group">
             <div class="col-xs-offset-1 col-md-offset-4 col-sm-offset-3 col-sm-6 col-lg-4 col-md-4 col-xs-10">
-                <input type="name" class="form-control height_box" placeholder="Write username">
+                <input type="name" name="username" class="form-control height_box" placeholder="Write username">
             </div>
         </div>
         <div class="row form-group">
             <div class="col-xs-offset-1 col-md-offset-4 col-sm-offset-3 col-sm-6 col-lg-4 col-md-4 col-xs-10">
-                <input type="password" class="form-control height_box" placeholder="Write password">
-                <input type="password" class="form-control" placeholder="Write confirmation password">
+                <input type="password" name="password" class="form-control height_box" placeholder="Write password">
+                <input type="password" name="conf_password" class="form-control" placeholder="Write confirmation password">
             </div>
         </div>
         <div class="row form-group">
             <div class="col-xs-offset-1 col-md-offset-4 col-sm-offset-3 col-sm-6 col-lg-4 col-md-4 col-xs-10">
-                <input type="email" class="form-control height_box" placeholder="Write email">
+                <input type="email" name="email" class="form-control height_box" placeholder="Write email">
             </div>
         </div>
         <div class="row form-group">
             <div class="col-xs-offset-1 col-md-offset-4 col-sm-offset-3 col-sm-6 col-lg-4 col-md-4 col-xs-10">
-                <input type="tel" class="form-control height_box" placeholder="Write mobile">
+                <input type="tel" name = "mobile" class="form-control height_box" placeholder="Write mobile">
             </div>
         </div>
         <div class="row form-group">
             <div class="col-xs-offset-1 col-md-offset-4 col-sm-offset-3 col-sm-6 col-lg-4 col-md-4 col-xs-10">
-                <input type="date" class="form-control height_box" placeholder="Write birthday">
+                <input type="date" name = "birth_date" class="form-control height_box" placeholder="Write birthday">
             </div>
         </div>
         <div class="row">
