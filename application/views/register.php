@@ -17,8 +17,10 @@
         </div>
         <div class="row form-group">
             <div class="col-xs-offset-1 col-md-offset-4 col-sm-offset-3 col-sm-6 col-lg-4 col-md-4 col-xs-10">
-                <input type="name" name="username" class="form-control height_box" onblur="validateForm_username()" placeholder="Write username">
+                <input type="name" name="username" id = "username" class="form-control height_box" onblur="validateForm_username()"  placeholder="Write username">
+
             </div>
+
             <p class= "error_notif error_text_height" id="notification_username"></p>
         </div>
         <div class="row form-group">

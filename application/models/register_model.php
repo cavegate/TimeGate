@@ -8,9 +8,9 @@
 
 class Register_model extends CI_Model
 {
-    public static function check_username_Register($username)
+    public static function check_username_register($username)
     {
-        $queryString = "select * from users where username = '$username'";
+        $queryString = "select * from users where username = 'Aram'";
         $result = mysql_query($queryString);
         if(count($result)>0)
         {

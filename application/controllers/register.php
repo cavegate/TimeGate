@@ -45,7 +45,21 @@ class Register extends CI_Controller {
         $birthDate = $this->input->post('birth_date');
 
 
+
+
         
+    }
+    public  function check_username(){
+
+        $this->load->model("register_model");
+        $username =  $this->input->post('username');
+        $result = $this->register_model->check_username_register($this->input->post('username'));
+        if( $result == false )
+        {
+            echo "no";
+        }
+        else
+            echo "yes";
     }
 }
 
