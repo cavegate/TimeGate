@@ -53,7 +53,7 @@ class Register extends CI_Controller {
 
         $this->load->model("register_model");
         $username =  $this->input->post('username');
-        $result = $this->register_model->check_username_register($this->input->post('username'));
+        $result = $this->register_model->check_username_register($username);
         if( $result == false )
         {
             echo "no";

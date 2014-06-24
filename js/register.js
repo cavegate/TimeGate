@@ -15,39 +15,40 @@ function validateForm_fullname()
 
 }
 
-$(document).ready(function(){
-    $("#username").blur(
-    request = $.ajax({
-        url:"<?php echo base_url();?>index.php/register/check_username",
-        type:"POST",
-        data:{"username":not_null},
-        success:function(result){
-            if(result == "no")
-            {
-                $("#notification_username").val = "نام کاربری تکراری میباشد";
-                alert("hi");
-            }
-            else{
-                $("#notification_username").val  = "";
-            }
-
-        }
-    })
-    );
-    return false;
-
-});
-
 function validateForm_username()
 {
-    var not_null = document.forms["registerForm"]["username"].value;
-    if (not_null == null || not_null == "") {
+    var user = document.forms["registerForm"]["username"].value;
+    if (user == null || user == "") {
         document.getElementById("notification_username").innerHTML = "این فیلد نباید خالی باشد";
     }
     else
     {
         document.getElementById("notification_username").innerHTML ="";
+        $(document).ready(function(){
+                request = $.ajax({
+                    url:"<?php echo base_url();?>index.php/register/check_username",
+                    type:"POST",
+                    data:{"username":user},
+                    success:function(result){
+                        if(result == "no")
+                        {
+                            $("#notification_username").val = "نام کاربری تکراری میباشد";
+                            alert("hi");
+                        }
+                        else{
+                            $("#notification_username").val  = "";
+                        }
+                    },
+                    beforeSend:function()
+                    {
+                    },
+                    error: function(xhr, status, error) {
+                        alert("hey");
+                    }
+                });
+            return false;
 
+        });
 
     }
 
