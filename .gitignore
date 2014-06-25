@@ -1,4 +1,2 @@
-#the workspace of phpstorm
-.idea/*
-#the config of the codeigniter
+.idea/
 application/config/
