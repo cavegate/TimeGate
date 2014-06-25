@@ -12,20 +12,10 @@ class Register_model extends CI_Model
     {
         $queryString = "select * from users where username = ?";
         $result = $con->query($queryString,array($username));
-        /*
-        echo $queryString;
-        echo "<br/><pre>";
-        echo $result->num_rows;
-        print_r($result);
-        echo "</pre>";*/
         if($result->num_rows>0)
-        {
             return true;
-        }
         else
-        {
             return false;
-        }
     }
     public static function add_Register($fullname, $username, $password, $email, $mobile, $birthDate)
     {
