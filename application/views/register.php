@@ -44,7 +44,7 @@
     });
 </script>
 </div>
-<div class="green_line">
+<div class="container">
     <form  name= "registerForm" method="post" action="<?php echo base_url();?>index.php/register">
         <div class="row form-group">
             <div class="col-xs-offset-1 col-md-offset-4 col-sm-offset-3 col-sm-6 col-lg-4 col-md-4 col-xs-10">

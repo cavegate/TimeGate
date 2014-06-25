@@ -40,6 +40,39 @@ class Dashboard extends CI_Controller {
         //Todo: Time spent so far
         //Todo: Who's working
         //Todo: Edit Profile
+
+        $this->load->library('session');
+        $username = $this->session->userdata('username');
+        if($username == FALSE)
+        {
+            $this->load->helper('url');
+            if(LANGUAGE == "en")
+                $this->lang->load('en','english');
+            else if(LANGUAGE == "fa")
+                $this->lang->load('fa','persian');
+            $headerPassedArray = array(
+                "header_meta_description" => $this->lang->line("login_header_meta_description"),
+                "title" => $this->lang->line("login_title"),
+                "website_header" => $this->lang->line("website_header"),
+                "is_login" => TRUE,
+                "LANGUAGE" => LANGUAGE
+            );
+            $dashboardPassedArray = array(
+                "isToday" => true,
+                "isLastDays" => false,
+                "isProfile" => false,
+                "isMyUsers" => false,
+                "isRegisterUsers" => false
+            );
+            $this->load->view('header',$headerPassedArray);
+            $this->load->view('dashboard',$dashboardPassedArray);
+            $this->load->view('footer');
+        }
+        else
+        {
+            $this->load->helper('url');
+            redirect('/welcome/','refresh');
+        }
     }
 
     /*
