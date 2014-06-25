@@ -9,21 +9,6 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/config/autoload.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/config/config.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/config/constants.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/config/database.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/config/doctypes.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/config/foreign_chars.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/config/hooks.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/config/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/config/migration.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/config/mimes.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/config/profiler.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/config/routes.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/config/smileys.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/application/config/user_agents.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
     </list>
     <ignored path="TimeGate.iws" />
     <ignored path="application/config/" />
@@ -113,7 +98,7 @@
       <file leaf-file-name="database.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/config/database.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="52" column="34" selection-start="2702" selection-end="2702" vertical-scroll-proportion="0.30861723" vertical-offset="990" max-vertical-offset="1628">
+            <state line="62" column="32" selection-start="3073" selection-end="3073" vertical-scroll-proportion="0.7525151" vertical-offset="990" max-vertical-offset="1628">
               <folding />
             </state>
           </provider>
@@ -351,7 +336,11 @@
       <created>1397191146987</created>
       <updated>1397191146987</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="the git ignore is now set&#10;&#10;not the .idea and the application config should not be tracked by git anymore">
+      <created>1403676324993</created>
+      <updated>1403676324993</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -378,6 +367,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22959183" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32795697" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -393,7 +383,6 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32993197" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -430,7 +419,8 @@
     <MESSAGE value="The fisrt configuration of TimeGate" />
     <MESSAGE value="The fisrt configuration of TimeGate codeigniter" />
     <MESSAGE value="the login page view is ready" />
-    <option name="LAST_COMMIT_MESSAGE" value="the login page view is ready" />
+    <MESSAGE value="the git ignore is now set&#10;&#10;not the .idea and the application config should not be tracked by git anymore" />
+    <option name="LAST_COMMIT_MESSAGE" value="the git ignore is now set&#10;&#10;not the .idea and the application config should not be tracked by git anymore" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -527,7 +517,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/config/database.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="52" column="34" selection-start="2702" selection-end="2702" vertical-scroll-proportion="0.30861723" vertical-offset="990" max-vertical-offset="1628">
+        <state line="62" column="32" selection-start="3073" selection-end="3073" vertical-scroll-proportion="0.7525151" vertical-offset="990" max-vertical-offset="1628">
           <folding />
         </state>
       </provider>
