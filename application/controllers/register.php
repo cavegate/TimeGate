@@ -49,17 +49,17 @@ class Register extends CI_Controller {
 
         
     }
-    public  function check_username(){
+    public  function check_username_validity(){
 
         $this->load->model("register_model");
         $username =  $this->input->post('username');
-        $result = $this->register_model->check_username_register($username);
+        $result = $this->register_model->check_username_register($username,$this->db);
         if( $result == false )
         {
-            echo "no";
+            echo "yes";
         }
         else
-            echo "yes";
+            echo "no";
     }
 }
 

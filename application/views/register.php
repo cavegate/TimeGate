@@ -6,6 +6,43 @@
  * Time: 5:25 PM
  */
 ?>
+<script>
+    $(document).ready(function(){
+        $("#username").blur(function(){
+
+            var user = document.forms["registerForm"]["username"].value;
+            if (user == null || user == "") {
+                document.getElementById("notification_username").innerHTML = "این فیلد نباید خالی باشد";
+            }
+            else
+            {
+                document.getElementById("notification_username").innerHTML ="";
+                request = $.ajax({
+                    url:"<?php echo base_url(); ?>index.php/register/check_username_validity",
+                    type:"POST",
+                    data:{"username":user},
+                    success:function(result){
+                        if(result == "no")
+                        {
+                            document.getElementById("notification_username").innerHTML = "نام کاربری تکراری میباشد";
+                        }
+                        else{
+                            $("#notification_username").val  = "";
+                        }
+                    },
+                    beforeSend:function()
+                    {
+                    },
+                    error: function(xhr, status, error) {
+                        alert("hey");
+                    }
+                });
+                return false;
+
+            }
+        });
+    });
+</script>
 </div>
 <div class="green_line">
     <form  name= "registerForm" method="post" action="<?php echo base_url();?>index.php/register">
@@ -17,7 +54,7 @@
         </div>
         <div class="row form-group">
             <div class="col-xs-offset-1 col-md-offset-4 col-sm-offset-3 col-sm-6 col-lg-4 col-md-4 col-xs-10">
-                <input type="name" name="username" id = "username" class="form-control height_box" onblur="validateForm_username()"  placeholder="Write username">
+                <input type="name" name="username" id = "username" class="form-control height_box" placeholder="Write username">
             </div>
 
             <p class= "error_notif error_text_height" id="notification_username"></p>
