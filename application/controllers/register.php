@@ -36,18 +36,21 @@ class Register extends CI_Controller {
     }
     public function submited_form(){
         $this->load->model("register_model");
-        $fullname =  $this->input->post('full_name');
-        $username =  $this->input->post('username');
+        $this->load->library('encrypt');
+        $this->load->library('Hash');
+        $username = $this->input->post('username');
         $password = $this->input->post('password');
-        $conf_password = $this->input->post('conf_password');
+        $full_name = $this->input->post('full_name');
         $email = $this->input->post('email');
         $mobile = $this->input->post('mobile');
-        $birthDate = $this->input->post('birth_date');
-
-
-
-
-        
+        $birth_date = $this->input->post('birth_date');
+        $encryptedPassword = Hash::create('sha256',$password,$this->config->item('encryption_key'));
+        $encryptedPassword = $this->encrypt->sha1($encryptedPassword);
+        $result = $this->register_model->add_Register($full_name,$username,$encryptedPassword,$email,$mobile,$birth_date,$this->db);
+        if($result == true)
+            echo "yes";
+        else
+            echo "no";
     }
     public  function check_username_validity(){
 

@@ -17,8 +17,13 @@ class Register_model extends CI_Model
         else
             return false;
     }
-    public static function add_Register($fullname, $username, $password, $email, $mobile, $birthDate)
+    public static function add_Register($full_name, $username, $password, $email, $mobile, $birthDate, $con)
     {
-
+        $queryString = "insert into users (full_name,username,password,email,mobile,birth_date) values ($full_name,$username,$password,$email,$mobile,$birthDate)";
+        $result = $con->query($queryString);
+        echo "<pre>";
+        print_r($result);
+        echo "</pre>";
+        return true;
     }
 }

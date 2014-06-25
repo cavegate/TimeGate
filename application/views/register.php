@@ -8,11 +8,64 @@
 ?>
 <script>
     $(document).ready(function(){
+        /*
+         * If click the register button
+         */
+        $("#register_button").click(function(){
+
+            alert(check_register_validity);
+            if(check_register_validity == 1)
+            {
+                /*
+                * If complete the form correctly
+                */
+                var username = document.forms["registerForm"]["username"].value;
+                var full_name = document.forms["registerForm"]["full_name"].value;
+                var password = document.forms["registerForm"]["password"].value;
+                var email = document.forms["registerForm"]["email"].value;
+                var mobile = document.forms["registerForm"]["mobile"].value;
+                var birth_date = document.forms["registerForm"]["birth_date"].value;
+
+                request = $.ajax({
+
+                    url:"<?php echo base_url(); ?>index.php/register/submited_form",
+                    type:"POST",
+                    data:{"username":username,"full_name":full_name,"password":password,"email":email,"mobile":mobile,"birth_date":birth_date},
+                    success:function(result){
+                        if(result == "yes")
+                        {
+                            alert("ثبت نام شما با موفقیت انجام شد.");
+                        }
+                        else{
+
+                        }
+                    },
+                    beforeSend:function()
+                    {
+                    },
+                    error: function(xhr, status, error) {
+                        alert("error");
+                    }
+
+                });
+
+            }
+            else
+            {
+
+            }
+        });
+
+
+
+
+
         $("#username").blur(function(){
 
             var user = document.forms["registerForm"]["username"].value;
             if (user == null || user == "") {
                 document.getElementById("notification_username").innerHTML = "این فیلد نباید خالی باشد";
+                check_register_validity = 0;
             }
             else
             {
@@ -25,9 +78,11 @@
                         if(result == "no")
                         {
                             document.getElementById("notification_username").innerHTML = "نام کاربری تکراری میباشد";
+                            check_register_validity = 0;
                         }
                         else{
                             $("#notification_username").val  = "";
+                            check_register_validity = 0;
                         }
                     },
                     beforeSend:function()
@@ -89,8 +144,8 @@
         <div class="row">
             <div class="col-xs-offset-1 col-md-offset-4 col-sm-offset-3 col-sm-6 col-lg-4 col-md-4 col-xs-10">
                 <div class="controls form-inline pad_bottom">
-                    <button type="submit" class="btn btn-primary btn-lg " onclick="">Register</button>
-                    <button type="button" class="btn btn-default btn-lg ">Cancel</button>
+                    <button type="button" id="register_button" class="btn btn-primary btn-lg ">Register</button>
+                    <button type="button" id="cancel_button" class="btn btn-default btn-lg ">Cancel</button>
                 </div>
             </div>
         </div>
