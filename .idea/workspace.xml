@@ -340,7 +340,11 @@
       <created>1403676324993</created>
       <updated>1403676324993</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="the git ignore is now set&#10;&#10;not the .idea and the application config should not be tracked by git anymore">
+      <created>1403676548529</created>
+      <updated>1403676548529</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
