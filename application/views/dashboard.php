@@ -15,12 +15,13 @@
          <span>
             <ul class="nav nav-tabs  nav-justified col-lg-offset-0 col-lg-3 height_box_first ">
                 <li <?php echo $isToday?'class="active"':"" ?>><a href="<?php echo base_url();?>/index.php/dashboard">Today</a></li>
+                <?php if (false){ ?>
                 <li <?php echo $isLastDays?'class="active"':"" ?>><a href="<?php echo base_url();?>/index.php/lastdays">Last Days</a></li>
                 <li <?php echo $isProfile?'class="active"':"" ?>><a href="<?php echo base_url();?>/index.php/profile">Profile</a></li>
-                <?php if (true){ ?>
                 <li <?php echo $isMyUsers?'class="active"':"" ?>><a href="<?php echo base_url();?>/index.php/myUsers">My Users</a></li>
-                <li <?php echo $isRegisterUsers?'class="active"':"" ?>><a href="<?php echo base_url();?>/index.php/register">Register Users</a></li>
                 <?php  } ?>
+                <li <?php echo $isRegisterUsers?'class="active"':"" ?>><a href="<?php echo base_url();?>/index.php/register">Register Users</a></li>
+
             </ul>
          </span>
 
