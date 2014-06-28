@@ -14,10 +14,26 @@
 {
     display: inline;
 }
-.pad_bottom
-{
-    margin-left: 30%;
-    margin-right: 20%;
+@media (max-width: 765px) {
+    .pad_bottom
+    {
+        margin-left: 30%;
+        margin-right: 20%;
+    }
+}
+@media (min-width: 766px) {
+    .pad_bottom
+    {
+       margin-left: 20%;
+        margin-right: 20%;
+    }
+}
+@media (min-width: 990px) and (max-width:1200px) {
+    .pad_bottom
+    {
+        margin-left: 13%;
+        margin-right: 20%;
+    }
 }
 .error_notif{
     color: #a73639;
@@ -32,3 +48,50 @@
 {
     margin-top: 14px;
 }
+
+.nav-tabs > li {
+    float: left;
+    margin-bottom: -1px;
+    font-size: 15px;
+
+}
+.nav-tabs > li > a {
+    margin-right: 2px;
+    line-height: 1.428571429;
+    border: 1px solid transparent;
+    border-radius: 4px 4px 0 0;
+}
+.nav-tabs > li > a:hover {
+    border-color: #515b99 #515b99 #515b99;
+}
+.nav > li > a:hover,
+.nav > li > a:focus {
+    text-decoration: none;
+    background-color: #9fbbee;
+}
+.nav-tabs.nav-justified > li > a {
+    border-bottom: 3px solid #515b99;
+    border-radius: 0px 0px 0 0;
+    border-width: 3px;
+    color: #1a3569;
+}
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    color: #accbdd;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: default;
+    background-color: #547c99;
+    border: 1px solid #64dd99;
+    border-width: 3px;
+    border-bottom-color: transparent;
+}
+
+
+.nav-tabs.nav-justified > .active > a,
+.nav-tabs.nav-justified > .active > a:hover,
+.nav-tabs.nav-justified > .active > a:focus {
+    border-bottom: 3px solid #547c99;
+}
+

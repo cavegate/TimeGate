@@ -31,8 +31,17 @@ class Register extends CI_Controller {
             "is_login" => TRUE,
             "LANGUAGE" => LANGUAGE
         );
+        $dashboardPassedArray = array(
+            "isToday" => false,
+            "isLastDays" => false,
+            "isProfile" => false,
+            "isMyUsers" => false,
+            "isRegisterUsers" => true
+        );
         $this->load->view('header',$headerPassedArray);
+        $this->load->view('dashboard',$dashboardPassedArray);
         $this->load->view('register');
+        $this->load->view('footer');
     }
     public function submited_form(){
         $this->load->model("register_model");
