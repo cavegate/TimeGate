@@ -21,10 +21,8 @@
                 <li <?php echo $isMyUsers?'class="active"':"" ?>><a href="<?php echo base_url();?>/index.php/myUsers">My Users</a></li>
                 <?php  } ?>
                 <li <?php echo $isRegisterUsers?'class="active"':"" ?>><a href="<?php echo base_url();?>/index.php/register">Register Users</a></li>
-
             </ul>
          </span>
-
         </div>
     </div>
 
