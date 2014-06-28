@@ -12,8 +12,6 @@
          * If click the register button
          */
         $("#register_button").click(function(){
-
-            alert(check_register_validity);
             if(check_register_validity == 1)
             {
                 /*

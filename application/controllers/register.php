@@ -46,7 +46,7 @@ class Register extends CI_Controller {
         $birth_date = $this->input->post('birth_date');
         $encryptedPassword = Hash::create('sha256',$password,$this->config->item('encryption_key'));
         $encryptedPassword = $this->encrypt->sha1($encryptedPassword);
-        $result = $this->register_model->add_Register($full_name,$username,$encryptedPassword,$email,$mobile,$birth_date,$this->db);
+        $result = $this->register_model->add_Register('12',$full_name,$username,$encryptedPassword,$email,$mobile,$birth_date,$this->db);
         if($result == true)
             echo "yes";
         else
