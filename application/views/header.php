@@ -53,16 +53,18 @@
 <div class="visible-md">medium</div>
 <div class="visible-lg">large</div>
 <div class="container">
-    <header class="row allHeader">
-        <div class="col-xs-12 col-sm-12 col-md-3<?php if($LANGUAGE == "fa")echo "col-md-push-9";?>">
-            <a href="<?php echo base_url();?>">
-                <img class="img-responsive" src="<?php echo base_url();?>img/logo-original<?php if($LANGUAGE == "fa")echo "-farsi";?>.png" alt="TimeGate Logo"/>
-            </a>
-        </div>
-        <div class="headerTitle hidden-xs hidden-sm col-md-9 <?php if($LANGUAGE == "fa")echo "col-md-pull-3";?>">
-            <?php echo $website_header;?>
-        </div>
-        <button></button>
+        <header class="row allHeader">
+            <div class="col-md-offset-12 col-md-2 hidden-xs hidden-sm" >
+                    <button class="btn-sm btn-warning" style="margin-top: 10px;">Sign Out</button>
+            </div>
+            <div class="col-xs-12 col-sm-12 col-md-3<?php if($LANGUAGE == "fa")echo "col-md-push-9";?>">
+                <a href="<?php echo base_url();?>">
+                    <img class="img-responsive" src="<?php echo base_url();?>img/logo-original<?php if($LANGUAGE == "fa")echo "-farsi";?>.png" alt="TimeGate Logo"/>
+                </a>
+            </div>
+            <div class="headerTitle hidden-xs hidden-sm col-md-9 <?php if($LANGUAGE == "fa")echo "col-md-pull-3";?>">
+                <?php echo $website_header;?>
+            </div>
     </header>
 
 <?php
