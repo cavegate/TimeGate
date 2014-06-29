@@ -10,20 +10,18 @@
  ?>
 </div>
 <div class="container">
-    <div class="row green_line">
-        <div>
-         <span>
-            <ul class="nav nav-tabs  nav-justified col-lg-offset-0 col-lg-3 height_box_first ">
-                <li <?php echo $isToday?'class="active"':"" ?>><a href="<?php echo base_url();?>index.php/dashboard">Today</a></li>
-                <?php if (false){ ?>
-                <li <?php echo $isLastDays?'class="active"':"" ?>><a href="<?php echo base_url();?>index.php/lastdays">Last Days</a></li>
-                <li <?php echo $isProfile?'class="active"':"" ?>><a href="<?php echo base_url();?>index.php/profile">Profile</a></li>
-                <li <?php echo $isMyUsers?'class="active"':"" ?>><a href="<?php echo base_url();?>index.php/myUsers">My Users</a></li>
-                <?php  } ?>
-                <li <?php echo $isRegisterUsers?'class="active"':"" ?>><a href="<?php echo base_url();?>index.php/register">Register Users</a></li>
-            </ul>
-         </span>
+    <div class="border1">
+        <div class="row">
+            <div class="col-xs-offset-1 col-md-offset-4 col-sm-offset-3 col-sm-6 col-lg-4 col-md-4 col-xs-10">
+                <div class="col-lg-6 col-md-4 col-sm-8 col-xs-10">
+                    <button type="submit" class="btn btn-danger btn-lg btn-time"  onclick="">SET TIME!</button>
+                </div>
+            </div>
         </div>
     </div>
+</div>
+
+
+
 
 

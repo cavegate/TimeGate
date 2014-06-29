@@ -62,6 +62,7 @@
         <div class="headerTitle hidden-xs hidden-sm col-md-9 <?php if($LANGUAGE == "fa")echo "col-md-pull-3";?>">
             <?php echo $website_header;?>
         </div>
+        <button></button>
     </header>
 
 <?php

@@ -39,7 +39,7 @@ class Register extends CI_Controller {
             "isRegisterUsers" => true
         );
         $this->load->view('header',$headerPassedArray);
-        $this->load->view('dashboard',$dashboardPassedArray);
+        $this->load->view('today',$dashboardPassedArray);
         $this->load->view('register');
         $this->load->view('footer');
     }

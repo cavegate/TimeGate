@@ -65,7 +65,8 @@ class Dashboard extends CI_Controller {
                 "isRegisterUsers" => false
             );
             $this->load->view('header',$headerPassedArray);
-            $this->load->view('dashboard',$dashboardPassedArray);
+            $this->load->view('today',$dashboardPassedArray);
+            $this->load->view('dashboard');
             $this->load->view('footer');
         }
         else

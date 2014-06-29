@@ -95,3 +95,22 @@
     border-bottom: 3px solid #547c99;
 }
 
+.border
+{
+    border: 3px solid #515b99;
+    border-top: hidden;
+
+}
+.border1
+{
+    border: 3px solid #515b99;
+    border-top: hidden;
+    height: 500px;
+}
+.btn-time
+{
+    position: relative;
+    margin-top: 50%;
+    margin-left: 50%;
+
+}
