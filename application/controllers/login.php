@@ -39,7 +39,7 @@ class Login extends CI_Controller {
         else
         {
             $this->load->helper('url');
-            redirect('/welcome/','refresh');
+            redirect('/dashboard/','refresh');
         }
     }
 
