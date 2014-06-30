@@ -12,23 +12,15 @@ class Register_model extends CI_Model
     {
         $queryString = "select * from users where username = ?";
         $result = $con->query($queryString,array($username));
-        /*
-        echo $queryString;
-        echo "<br/><pre>";
-        echo $result->num_rows;
-        print_r($result);
-        echo "</pre>";*/
         if($result->num_rows>0)
-        {
             return true;
-        }
         else
-        {
             return false;
-        }
     }
-    public static function add_Register($fullname, $username, $password, $email, $mobile, $birthDate)
+    public static function add_Register($personal_id,$full_name, $username, $password, $email, $mobile, $birth_Date, $con)
     {
-
+        $queryString = "insert into users (personal_id,full_name,username,password,birthdate,mobile,email) values (?,?,?,?,?,?,?)";
+        $result = $con->query($queryString,array($personal_id,$full_name,$username,$password,$birth_Date,$mobile,$email));
+        return true;
     }
 }

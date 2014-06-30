@@ -9,6 +9,34 @@
  * The login page that gets the user info username and password + captcha
  */
 ?>
+<script>
+    $(document).ready(function(){
+
+        function ajaxLogin (username,password)
+        {
+            request = $.ajax({
+                url:"<?php echo base_url(); ?>index.php/login/checkLogin",
+                type:"POST",
+                data:{"username":username, "password":password},
+                success:function(result){
+                    if(result == "no")
+                    {
+                        document.getElementById("notification_username").innerHTML = "نام کاربری تکراری میباشد";
+                    }
+                    else{
+                        $("#notification_username").val  = "";
+                    }
+                },
+                beforeSend:function()
+                {
+                },
+                error: function(xhr, status, error) {
+                    alert("hey");
+                }
+            });
+        }
+    });
+</script>
 </div>
 <div class="jumbotron">
     <div class="row">

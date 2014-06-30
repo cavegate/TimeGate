@@ -43,7 +43,7 @@ class Dashboard extends CI_Controller {
 
         $this->load->library('session');
         $username = $this->session->userdata('username');
-        if($username == FALSE)
+        if($username == true)
         {
             $this->load->helper('url');
             if(LANGUAGE == "en")
@@ -72,7 +72,7 @@ class Dashboard extends CI_Controller {
         else
         {
             $this->load->helper('url');
-            redirect('/welcome/','refresh');
+            redirect('/register/','refresh');
         }
     }
 

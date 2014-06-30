@@ -1,22 +1,19 @@
 /**
  * Created by AramJ on 6/23/14.
  */
-
+var check_register_validity = 0;
 function validateForm_fullname()
 {
     var not_null = document.forms["registerForm"]["full_name"].value;
     if (not_null == null || not_null == "") {
         document.getElementById("notification_fullname").innerHTML = "این فیلد نباید خالی باشد";
+        check_register_validity = 0;
     }
     else
     {
         document.getElementById("notification_fullname").innerHTML ="";
+        check_register_validity = 1;
     }
-
-}
-
-function validateForm_username()
-{
 
 }
 
@@ -26,14 +23,16 @@ function validateForm_password()
     var conf_pass = document.forms["registerForm"]["conf_password"].value;
     if (pass == null || pass == ""){
         document.getElementById("notification_password").innerHTML = "این فیلد نباید خالی باشد";
+        check_register_validity = 0;
     }
-    else if (pass != conf_pass && conf_pass != null){
+    /*else if (pass != conf_pass && conf_pass != null){
         document.getElementById("notification_password").innerHTML ="رمز و تایید رمز همخوانی ندارند";
-
-    }
+        check_register_validity = 0;
+    }*/
     else
     {
         document.getElementById("notification_password").innerHTML ="";
+        check_register_validity = 1;
     }
 
 }
@@ -44,15 +43,17 @@ function validateForm_conf_password()
     var conf_pass = document.forms["registerForm"]["conf_password"].value;
     if (conf_pass== null || conf_pass== "") {
         document.getElementById("notification_conf_password").innerHTML = "این فیلد نباید خالی باشد";
+        check_register_validity = 0;
     }
     else if(pass != conf_pass)
     {
-
         document.getElementById("notification_conf_password").innerHTML ="رمز و تایید رمز همخوانی ندارند";
+        check_register_validity = 0;
     }
     else
     {
         document.getElementById("notification_conf_password").innerHTML ="";
+        check_register_validity = 1;
     }
 
 }
@@ -61,10 +62,12 @@ function validateForm_email()
     var not_null = document.forms["registerForm"]["email"].value;
     if (not_null == null || not_null == "") {
         document.getElementById("notification_email").innerHTML = "این فیلد نباید خالی باشد";
+        check_register_validity = 0;
     }
     else
     {
         document.getElementById("notification_email").innerHTML ="";
+        check_register_validity = 1;
     }
 }
 
@@ -74,10 +77,12 @@ function validateForm_mobile()
     if(isNaN(number)== true)
     {
         document.getElementById("notification_mobile").innerHTML = "شماره موبایل اشتباه میباشد";
+        check_register_validity = 0;
     }
     else
     {
         document.getElementById("notification_mobile").innerHTML ="";
+        check_register_validity = 1;
     }
 
 }
@@ -87,16 +92,11 @@ function validateForm_date()
     if(birth_date == null || birth_date == "")
     {
         document.getElementById("notification_date").innerHTML = "تاریخ وارد نشده است";
+        check_register_validity = 0;
     }
     else
     {
         document.getElementById("notification_date").innerHTML ="";
+        check_register_validity = 1;
     }
-
 }
-function validateForm_buttom()
-{
-
-
-}
-
