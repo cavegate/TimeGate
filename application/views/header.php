@@ -54,9 +54,11 @@
 <div class="visible-lg">large</div>
 <div class="container">
         <header class="row allHeader">
+            <?php if($is_login == true){?>
             <div class="col-md-offset-12 col-md-2 hidden-xs hidden-sm active"  >
-                    <button class="btn-sm btn-warning" onclick="<?php echo base_url();?>index.php/login/">Sign Out</button>
+                    <a href="<?php echo base_url()?>index.php/logout"><button class="btn-sm btn-warning" id="logout_btn">Sign Out</button></a>
             </div>
+            <?php }?>
             <div class="col-xs-12 col-sm-12 col-md-3<?php if($LANGUAGE == "fa")echo "col-md-push-9";?>">
                 <a href="<?php echo base_url();?>">
                     <img class="img-responsive" src="<?php echo base_url();?>img/logo-original<?php if($LANGUAGE == "fa")echo "-farsi";?>.png" alt="TimeGate Logo"/>
