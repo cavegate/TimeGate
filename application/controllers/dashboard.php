@@ -76,6 +76,13 @@ class Dashboard extends CI_Controller {
         }
     }
 
+    /**
+     * Descriptions:
+     * if push button take time.
+     *
+     */
+
+
     /*
      * Description:
      *

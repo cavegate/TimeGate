@@ -54,8 +54,8 @@
 <div class="visible-lg">large</div>
 <div class="container">
         <header class="row allHeader">
-            <div class="col-md-offset-12 col-md-2 hidden-xs hidden-sm" >
-                    <button class="btn-sm btn-warning" style="margin-top: 10px;">Sign Out</button>
+            <div class="col-md-offset-12 col-md-2 hidden-xs hidden-sm active"  >
+                    <button class="btn-sm btn-warning" onclick="<?php echo base_url();?>index.php/login/">Sign Out</button>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-3<?php if($LANGUAGE == "fa")echo "col-md-push-9";?>">
                 <a href="<?php echo base_url();?>">
