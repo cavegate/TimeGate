@@ -31,17 +31,8 @@ class Register extends CI_Controller {
             "is_login" => TRUE,
             "LANGUAGE" => LANGUAGE
         );
-        $dashboardPassedArray = array(
-            "isToday" => false,
-            "isLastDays" => false,
-            "isProfile" => false,
-            "isMyUsers" => false,
-            "isRegisterUsers" => true
-        );
         $this->load->view('header',$headerPassedArray);
-        $this->load->view('today',$dashboardPassedArray);
         $this->load->view('register');
-        $this->load->view('footer');
     }
     public function submited_form(){
         $this->load->model("register_model");
@@ -55,7 +46,7 @@ class Register extends CI_Controller {
         $birth_date = $this->input->post('birth_date');
         $encryptedPassword = Hash::create('sha256',$password,$this->config->item('encryption_key'));
         $encryptedPassword = $this->encrypt->sha1($encryptedPassword);
-        $result = $this->register_model->add_Register('12',$full_name,$username,$encryptedPassword,$email,$mobile,$birth_date,$this->db);
+        $result = $this->register_model->add_Register($full_name,$username,$encryptedPassword,$email,$mobile,$birth_date,$this->db);
         if($result == true)
             echo "yes";
         else
