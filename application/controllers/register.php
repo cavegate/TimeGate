@@ -19,6 +19,7 @@ class Register extends CI_Controller {
 */
     public function index()
     {
+        //todo: check beshe age admin bood register barash baz beshe
         $this->load->helper('url');
         if(LANGUAGE == "en")
             $this->lang->load('en','english');
