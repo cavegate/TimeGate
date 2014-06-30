@@ -29,7 +29,7 @@ class Login extends CI_Controller {
                 "header_meta_description" => $this->lang->line("login_header_meta_description"),
                 "title" => $this->lang->line("login_title"),
                 "website_header" => $this->lang->line("website_header"),
-                "is_login" => TRUE,
+                "is_login" => False,
                 "LANGUAGE" => LANGUAGE
             );
             $this->load->view('header',$headerPassedArray);

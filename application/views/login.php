@@ -12,8 +12,10 @@
 <script>
     $(document).ready(function(){
 
-        function ajaxLogin (username,password)
-        {
+        $("#login_btn").click(function(){
+
+            var username = document.forms["login_form"]["username"].value;
+            var password = document.forms["login_form"]["password"].value;
             request = $.ajax({
                 url:"<?php echo base_url(); ?>index.php/login/checkLogin",
                 type:"POST",
@@ -21,27 +23,29 @@
                 success:function(result){
                     if(result == "no")
                     {
-                        document.getElementById("notification_username").innerHTML = "نام کاربری تکراری میباشد";
+                        document.getElementById("login_notif").innerHTML = "نام کاربری / رمز عبور اشتباه می باشد";
                     }
                     else{
-                        $("#notification_username").val  = "";
+                        window.location.href = "<?php echo base_url(); ?>index.php/dashboard";
                     }
                 },
                 beforeSend:function()
                 {
                 },
                 error: function(xhr, status, error) {
-                    alert("hey");
+                    alert("error");
                 }
             });
-        }
+            return false;
+        });
     });
 </script>
 </div>
 <div class="jumbotron">
     <div class="row">
         <div class="middleForm col-sm-4 col-sm-offset-4">
-            <form role="form" action="<?php echo base_url();?>index.php/login/checklogin/" method="POST">
+            <p id="login_notif" style="color: #CC0000"></p>
+            <form name="login_form" role="form" action="<?php echo base_url();?>index.php/login/checklogin/" method="POST">
                 <div class="form-group">
                     <label for="inputUsername">Username</label>
                     <input type="text" class="form-control" name="username" placeholder="Username goes here">
@@ -50,7 +54,7 @@
                     <label for="inputPassword">Password</label>
                     <input type="password" class="form-control" name="password" placeholder="Password goes here">
                 </div>
-                <button type="submit" class="btn btn-warning btn-lg btn-border">Log me in please</button>
+                <button class="btn btn-warning btn-lg btn-border" id="login_btn"">Log me in please</button>
             </form>
         </div>
     </div>
