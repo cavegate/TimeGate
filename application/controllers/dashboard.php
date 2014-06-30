@@ -72,7 +72,7 @@ class Dashboard extends CI_Controller {
         else
         {
             $this->load->helper('url');
-            redirect('/register/','refresh');
+            redirect('/login/','refresh');
         }
     }
 
