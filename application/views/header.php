@@ -53,9 +53,9 @@
 <div class="visible-md">medium</div>
 <div class="visible-lg">large</div>
 <div class="container">
-        <header class="row allHeader">
+        <header class="row all-header">
             <?php if($is_login == true){?>
-            <div class="col-md-offset-12 col-md-2 hidden-xs hidden-sm active"  >
+            <div class="col-md-offset-11 col-md-2 hidden-xs hidden-sm active"  >
                     <a href="<?php echo base_url()?>index.php/logout"><button class="btn-sm btn-warning" id="logout_btn">Sign Out</button></a>
             </div>
             <?php }?>
@@ -64,7 +64,7 @@
                     <img class="img-responsive" src="<?php echo base_url();?>img/logo-original<?php if($LANGUAGE == "fa")echo "-farsi";?>.png" alt="TimeGate Logo"/>
                 </a>
             </div>
-            <div class="headerTitle hidden-xs hidden-sm col-md-9 <?php if($LANGUAGE == "fa")echo "col-md-pull-3";?>">
+            <div class="header-title hidden-xs hidden-sm col-md-9 <?php if($LANGUAGE == "fa")echo "col-md-pull-3";?>">
                 <?php echo $website_header;?>
             </div>
     </header>

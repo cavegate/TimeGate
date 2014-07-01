@@ -43,7 +43,7 @@
 </div>
 <div class="jumbotron">
     <div class="row">
-        <div class="middleForm col-sm-4 col-sm-offset-4">
+        <div class="middle-form col-sm-4 col-sm-offset-4">
             <p id="login_notif" style="color: #CC0000"></p>
             <form name="login_form" role="form" action="<?php echo base_url();?>index.php/login/checklogin/" method="POST">
                 <div class="form-group">

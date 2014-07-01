@@ -43,7 +43,7 @@ class Dashboard extends CI_Controller {
 
         $this->load->library('session');
         $username = $this->session->userdata('username');
-        if($username == true)
+        if(true)//todo: after the login is currect($username == true)
         {
             $this->load->helper('url');
             if(LANGUAGE == "en")
@@ -58,15 +58,15 @@ class Dashboard extends CI_Controller {
                 "LANGUAGE" => LANGUAGE
             );
             $dashboardPassedArray = array(
-                "isToday" => true,
-                "isLastDays" => false,
+                "isLogTime" => true,
+                "isLoggedTimes" => false,
                 "isProfile" => false,
                 "isMyUsers" => false,
                 "isRegisterUsers" => false
             );
             $this->load->view('header',$headerPassedArray);
-            $this->load->view('today',$dashboardPassedArray);
-            $this->load->view('dashboard');
+            $this->load->view('navbar',$dashboardPassedArray);
+            $this->load->view('log_time');
             $this->load->view('footer');
         }
         else
@@ -75,12 +75,6 @@ class Dashboard extends CI_Controller {
             redirect('/login/','refresh');
         }
     }
-
-    /**
-     * Descriptions:
-     * if push button take time.
-     *
-     */
 
 
     /*

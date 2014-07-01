@@ -33,14 +33,14 @@ class Register extends CI_Controller {
             "LANGUAGE" => LANGUAGE
         );
         $dashboardPassedArray = array(
-            "isToday" => false,
-            "isLastDays" => false,
+            "isLogTime" => false,
+            "isLoggedTimes" => false,
             "isProfile" => false,
             "isMyUsers" => false,
             "isRegisterUsers" => true
         );
         $this->load->view('header',$headerPassedArray);
-        $this->load->view('today',$dashboardPassedArray);
+        $this->load->view('navbar',$dashboardPassedArray);
         $this->load->view('register');
         $this->load->view('footer');
     }
