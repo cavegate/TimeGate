@@ -48,14 +48,24 @@ class Register extends CI_Controller {
         $this->load->model("register_model");
         $this->load->library('encrypt');
         $this->load->library('Hash');
+
         $username = $this->input->post('username');
         $password = $this->input->post('password');
         $full_name = $this->input->post('full_name');
         $email = $this->input->post('email');
         $mobile = $this->input->post('mobile');
         $birth_date = $this->input->post('birth_date');
+        /*
+        $username = 'ehsan';
+        $password = 'ehsanh';
+        $full_name = 'ehsanh';
+        $email = 'a.aa.com';
+        $mobile = '87696';
+        $birth_date = '2014-01-01';
+        */
         $encryptedPassword = Hash::create('sha256',$password,$this->config->item('encryption_key'));
         $encryptedPassword = $this->encrypt->sha1($encryptedPassword);
+        $mobile = preg_replace("/[^0-9,.]/", "", $mobile);
         $result = $this->register_model->add_Register($full_name,$username,$encryptedPassword,$email,$mobile,$birth_date,$this->db);
         if($result == true)
             echo "yes";
@@ -67,6 +77,17 @@ class Register extends CI_Controller {
         $this->load->model("register_model");
         $username =  $this->input->post('username');
         $result = $this->register_model->check_username_register($username,$this->db);
+        if( $result == false )
+        {
+            echo "yes";
+        }
+        else
+            echo "no";
+    }
+    public function check_email_validity(){
+        $this->load->model("register_model");
+        $email =  $this->input->post('email');
+        $result = $this->register_model->check_email_register($email,$this->db);
         if( $result == false )
         {
             echo "yes";

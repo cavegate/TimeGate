@@ -10,8 +10,17 @@ class Register_model extends CI_Model
 {
     public static function check_username_register($username,$con)
     {
-        $queryString = "select * from users where username = ?";
-        $result = $con->query($queryString,array($username));
+        $username = strtolower($username);
+        $result = $con->get_where('users',array('username' => $username));
+        if($result->num_rows>0)
+            return true;
+        else
+            return false;
+    }
+    public static function check_email_register($email,$con)
+    {
+        $email = strtolower($email);
+        $result = $con->get_where('users',array('email' => $email));
         if($result->num_rows>0)
             return true;
         else
@@ -19,8 +28,22 @@ class Register_model extends CI_Model
     }
     public static function add_Register($full_name, $username, $password, $email, $mobile, $birth_Date, $con)
     {
-        $queryString = "insert into users (full_name,username,password,birthdate,mobile,email) values (?,?,?,?,?,?)";
-        $result = $con->query($queryString,array($full_name,$username,$password,$birth_Date,$mobile,$email));
-        return true;
+        $username = strtolower($username);
+        $result = $con->get('users');
+        $pid = $result->num_rows +1;
+        $data = array(
+            'personal_id' => $pid,
+            'full_name' => $full_name,
+            'username' => $username,
+            'password' => $password,
+            'birthdate' => $birth_Date,
+            'mobile' => $mobile,
+            'email' => $email
+        );
+        $con->insert('users',$data);
+        if($con)
+            return true;
+        else
+            return false;
     }
 }

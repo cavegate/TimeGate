@@ -35,7 +35,7 @@
                             alert("ثبت نام شما با موفقیت انجام شد.");
                         }
                         else{
-
+                            alert("شما قادر به ثبت نام نمی باشید.");
                         }
                     },
                     beforeSend:function()
@@ -54,6 +54,43 @@
             }
         });
 
+
+        $("#email").blur(function(){
+
+            var email = document.forms["registerForm"]["email"].value;
+            if (email == null || email == "") {
+                document.getElementById("notification_email").innerHTML = "این فیلد نباید خالی باشد";
+                check_register_validity = 0;
+            }
+            else
+            {
+                document.getElementById("notification_email").innerHTML ="";
+                request = $.ajax({
+                    url:"<?php echo base_url(); ?>index.php/register/check_email_validity",
+                    type:"POST",
+                    data:{"email":email},
+                    success:function(result){
+                        if(result == "no")
+                        {
+                            document.getElementById("notification_email").innerHTML = "ایمیل تکراری می باشد";
+                            check_register_validity = 0;
+                        }
+                        else{
+                            $("#notification_email").val  = "";
+                            check_register_validity = 0;
+                        }
+                    },
+                    beforeSend:function()
+                    {
+                    },
+                    error: function(xhr, status, error) {
+                        alert("error");
+                    }
+                });
+                return false;
+
+            }
+        });
 
 
 
@@ -101,13 +138,13 @@
     <form  name= "registerForm" method="post" action="<?php echo base_url();?>index.php/register">
         <div class="row form-group">
             <div class="col-xs-offset-1 col-md-offset-4 col-sm-offset-3 col-sm-6 col-lg-4 col-md-4 col-xs-10">
-                <input type="name" name="full_name"  class="form-control height_box_first" onblur="validateForm_fullname()" placeholder="Write full name">
+                <input name="full_name"  class="form-control height_box_first" onblur="validateForm_fullname()" placeholder="Write full name">
             </div>
             <p class= "error_notif error_text_height_first" id="notification_fullname"></p>
         </div>
         <div class="row form-group">
             <div class="col-xs-offset-1 col-md-offset-4 col-sm-offset-3 col-sm-6 col-lg-4 col-md-4 col-xs-10">
-                <input type="name" name="username" id = "username" class="form-control height_box" placeholder="Write username">
+                <input name="username" id = "username" class="form-control height_box" placeholder="Write username">
             </div>
 
             <p class= "error_notif error_text_height" id="notification_username"></p>
@@ -122,13 +159,13 @@
         </div>
         <div class="row form-group">
             <div class="col-xs-offset-1 col-md-offset-4 col-sm-offset-3 col-sm-6 col-lg-4 col-md-4 col-xs-10">
-                <input type="email" name="email" class="form-control height_box"  onblur="validateForm_email()"placeholder="Write email">
+                <input type="email" id="email" name="email" class="form-control height_box" placeholder="Write email">
             </div>
             <p class= "error_notif error_text_height" id="notification_email"></p>
         </div>
         <div class="row form-group">
             <div class="col-xs-offset-1 col-md-offset-4 col-sm-offset-3 col-sm-6 col-lg-4 col-md-4 col-xs-10">
-                <input type="tel" name = "mobile" class="form-control height_box" onblur="validateForm_mobile()" placeholder="Write mobile">
+                <input name = "mobile" class="form-control height_box" onblur="validateForm_mobile()" placeholder="Write mobile">
             </div>
             <p class= "error_notif error_text_height" id="notification_mobile"></p>
         </div>
