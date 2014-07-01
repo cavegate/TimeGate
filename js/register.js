@@ -57,24 +57,27 @@ function validateForm_conf_password()
     }
 
 }
-function validateForm_email()
-{
-    var not_null = document.forms["registerForm"]["email"].value;
-    if (not_null == null || not_null == "") {
-        document.getElementById("notification_email").innerHTML = "این فیلد نباید خالی باشد";
-        check_register_validity = 0;
-    }
-    else
-    {
-        document.getElementById("notification_email").innerHTML ="";
-        check_register_validity = 1;
-    }
-}
 
 function validateForm_mobile()
 {
     var number = document.forms["registerForm"]["mobile"].value;
-    if(isNaN(number)== true)
+    var i;
+    var result = true;
+    for(i=0;i<number.length;i++)
+    {
+        var j;
+        for(j='a';j<='z';j++)
+        {
+            if(number[i]==j)
+                result = false;
+        }
+        for(j='A';j<='Z';j++)
+        {
+            if(number[i]==j)
+                result = false;
+        }
+    }
+    if(result == false)
     {
         document.getElementById("notification_mobile").innerHTML = "شماره موبایل اشتباه میباشد";
         check_register_validity = 0;
@@ -84,7 +87,6 @@ function validateForm_mobile()
         document.getElementById("notification_mobile").innerHTML ="";
         check_register_validity = 1;
     }
-
 }
 function validateForm_date()
 {

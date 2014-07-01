@@ -56,7 +56,7 @@
         <header class="row allHeader">
             <?php if($is_login == true){?>
             <div class="col-md-offset-12 col-md-2 hidden-xs hidden-sm active"  >
-                    <a href="<?php echo base_url()?>index.php/logout"><button class="btn-sm btn-warning" id="logout_btn">Sign Out</button></a>
+                    <a href="<?php echo base_url()?>index.php/login/logout"><button class="btn-sm btn-warning" id="logout_btn">Sign Out</button></a>
             </div>
             <?php }?>
             <div class="col-xs-12 col-sm-12 col-md-3<?php if($LANGUAGE == "fa")echo "col-md-push-9";?>">
