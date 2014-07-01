@@ -42,7 +42,18 @@ class Login extends CI_Controller {
             redirect('/dashboard/','refresh');
         }
     }
-
+    function logout()
+    {
+        $this->load->helper('url');
+        $this->load->library('session');
+        $data = array(
+            'username' => "",
+            'full_name' => "",
+            'email' => ""
+        );
+        $this->session->unset_userdata($data);
+        redirect('/login/','refresh');
+    }
     function checkLogin()
     {
         $this->load->model('login_model');

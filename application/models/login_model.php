@@ -16,8 +16,7 @@ class Login_model extends CI_Model
      */
     public static function checkLogin($username, $password,$con)
     {
-        $queryString = "select * from users where username = ? and password = ?";
-        $result = $con->query($queryString,array($username,$password));
+        $result = $con->get_where('users',array('username' => $username , 'password' => $password));
         if($result->num_rows>0)
             return $result;
         else
