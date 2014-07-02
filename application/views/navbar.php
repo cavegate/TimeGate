@@ -6,6 +6,9 @@
  * Time: 3:39 PM
  */ ?>
 </div>
+<div class="col-xs-push-1 col-xs-10 bottom-line">
+</div>
+
 <div class="container">
     <div class="row header_bottom_border">
         <ul class="nav nav-tabs col-lg-3">
