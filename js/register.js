@@ -26,9 +26,9 @@ function validateForm_password()
         check_register_validity = 0;
     }
     /*else if (pass != conf_pass && conf_pass != null){
-     document.getElementById("notification_password").innerHTML ="رمز و تایید رمز همخوانی ندارند";
-     check_register_validity = 0;
-     }*/
+        document.getElementById("notification_password").innerHTML ="رمز و تایید رمز همخوانی ندارند";
+        check_register_validity = 0;
+    }*/
     else
     {
         document.getElementById("notification_password").innerHTML ="";
