@@ -1,7 +1,30 @@
 <?php
 /**
  * Created by PhpStorm.
- * User: MohammadSadjad
- * Date: 7/2/14
- * Time: 2:52 PM
- */ 
+ * User: AramJ
+ * Date: 6/28/14
+ * Time: 3:39 PM
+ */ ?>
+</div>
+<div class="container">
+    <div class="row header_bottom_border">
+        <ul class="nav nav-tabs col-lg-3">
+            <li <?php echo $isLogTime?'class="active"':"" ?>>
+                <a href="<?php echo base_url();?>index.php/dashboard">Log Time</a>
+            </li>
+            <?php if (false){ ?>
+            <li <?php echo $isLoggedTimes?'class="active"':"" ?>>
+                <a href="<?php echo base_url();?>index.php/lastdays">Last Days</a>
+            </li>
+            <li <?php echo $isProfile?'class="active"':"" ?>>
+                <a href="<?php echo base_url();?>index.php/profile">Profile</a>
+            </li>
+            <li <?php echo $isMyUsers?'class="active"':"" ?>>
+                <a href="<?php echo base_url();?>index.php/myUsers">My Users</a>
+            </li>
+            <?php  } ?>
+            <li <?php echo $isRegisterUsers?'class="active"':"" ?>>
+                <a href="<?php echo base_url();?>index.php/register">Register Users</a>
+            </li>
+        </ul>
+    </div>
