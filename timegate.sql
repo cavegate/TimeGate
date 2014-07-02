@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.4.1
+-- version 4.0.4
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Jun 19, 2014 at 10:01 AM
--- Server version: 5.5.32
--- PHP Version: 5.4.19
+-- Host: localhost
+-- Generation Time: Jun 23, 2014 at 05:42 AM
+-- Server version: 5.6.12-log
+-- PHP Version: 5.4.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -49,8 +49,11 @@ CREATE TABLE IF NOT EXISTS `users` (
   `username` varchar(30) COLLATE utf8_persian_ci NOT NULL,
   `password` varchar(30) COLLATE utf8_persian_ci NOT NULL,
   `birthdate` date NOT NULL,
+  `mobile` bigint(20) DEFAULT NULL,
+  `email` varchar(60) COLLATE utf8_persian_ci NOT NULL,
   PRIMARY KEY (`personal_id`),
-  UNIQUE KEY `username` (`username`)
+  UNIQUE KEY `username` (`username`),
+  UNIQUE KEY `email` (`email`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_persian_ci;
 
 --
