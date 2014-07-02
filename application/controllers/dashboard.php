@@ -93,6 +93,13 @@ class Dashboard extends CI_Controller {
     private function calculateLoginStatus()
     {
         //Todo: check the session to see if the user has logged in or not
+
+        $this->load->library('session');
+        $username = $this->session->userdata('username');
+        if($username == true)
+            return true;
+        else
+            return false;
     }
 
     /*
@@ -106,6 +113,24 @@ class Dashboard extends CI_Controller {
     private function calculateLastLoginStatus()
     {
         //Todo: check to see if the user was last logged in or logged out and return the proper result
+        if($this->calculateLoginStatus())
+        {
+            $this->load->model('dashboard_model');
+            $this->load->library('session');
+            $username = $this->session->userdata('username');
+            $in = $this->dashboard_model->getLastLoginStatus($username,$this->db);
+            return $in;
+            //'1' == login , '0' == logout
+        }
+        else
+        {
+            $this->load->helper('url');
+            redirect('/login/','refresh');
+        }
+    }
+    public function setChange()
+    {
+        $this->changeWorkingStatus(false);
     }
 
     /*
@@ -114,13 +139,49 @@ class Dashboard extends CI_Controller {
      * This function log the status of the user using the model. if isManually is set then the the hour, minute and so
      * on are the base for inserting otherwise the system time and date are the base
      * this function checks whether the last status is login or logout and insert the other one
-     * this functions passes the insert parameters as an assosiative array to the model
+     * this functions passes the insert parameters as an associative array to the model
      *
      * This functions are private in order to limit their accessibility from url request
      */
-    private function changeWorkingStatus($isManually, $hour = -1, $minute = -1, $day = -1, $month = -1, $month = -1, $year = -1)
+    private function changeWorkingStatus($isManually, $hour = -1, $minute = -1, $second = -1, $day = -1, $month = -1, $year = -1)
     {
         //Todo: change the status of the the user from logged in to log out and from logged out to log in
+        if($isManually == true)
+        {
+
+        }
+        else
+        {
+            if($this->calculateLoginStatus())
+            {
+                $this->load->helper('date');
+                $datestring = "%Y-%m-%d %H:%i:%s";
+                $time = time();
+                $datetime = mdate($datestring, $time);
+                echo($datetime);
+                $this->load->model('dashboard_model');
+                $this->load->library('session');
+                $personal_id = $this->session->userdata('personal_id');
+                $out_or_in = $this->calculateLastLoginStatus();
+                if($out_or_in == false)
+                    $out_or_in = true;
+                else
+                    $out_or_in = false;
+
+                $data = array('datetime' => $datetime,
+                              'personal_id' => $personal_id,
+                              'is_manually_entered' => $isManually,
+                              'out_or_in' => $out_or_in);
+                $this->load->model('dashboard_model');
+                $res = $this->dashboard_model->setNewStatusTime($data,$this->db);
+
+            }
+            else
+            {
+                $this->load->helper('url');
+                redirect('/login/','refresh');
+            }
+        }
     }
 }
 

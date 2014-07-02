@@ -13,9 +13,21 @@ class Dashboard_model extends CI_Model
      *
      * using the username, this function retrievs the last login status of the user and returns the time and status back in an array
      */
-    public static function getLastLoginStatus($username)
+    public static function getLastLoginStatus($username,$con,$in = false)
     {
         //Todo: get the last login status from the database and returns it to the user
+        $result = $con->get_where('users',array('username' => $username));
+        $pid = 0;
+        foreach($result->result() as $res )
+        {
+            $pid = $res->personal_id;
+        }
+        $stringquery = "SELECT * FROM  times WHERE DATETIME = ( SELECT MAX( DATETIME ) FROM times WHERE personal_id = ? )";
+        $result = $con->query($stringquery,array($pid));
+        $sadjad = $result->result_array();
+        $in = $sadjad["0"]["out_or_in"];
+        // '1' == login, '0' == logout
+        return $in;
     }
 
     /*
@@ -23,8 +35,9 @@ class Dashboard_model extends CI_Model
      *
      * this function will recieve an associated array and insert it's data to the database as the last login time
      */
-    public static function setNewStatusTime($insertArray)
+    public static function setNewStatusTime($insertArray,$con)
     {
         //Todo: insert the login status to the database
+        $con->insert('times',$insertArray);
     }
 }
