@@ -12,7 +12,7 @@
 
     <footer>
         <div class="container">
-            <div class="row">
+            <div class="row footer-space">
                 <div class="col-sm-2 col-sm-offset-4 txt-footer hidden-xs">
                     Powered by:
                 </div>

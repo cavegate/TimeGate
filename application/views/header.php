@@ -44,7 +44,7 @@
     <script src="<?php echo base_url();?>js/jquery.prettyPhoto.js"></script>
     <script src="<?php echo base_url();?>js/jquery.custom.js"></script>
     <script src="<?php echo base_url();?>js/price.js"></script>
-    <script src="<?php echo base_url();?>js/register.js"></script>
+
 
 </head>
 <body>
@@ -53,11 +53,11 @@
 <div class="visible-md">medium</div>
 <div class="visible-lg">large</div>
 <div class="container">
+    <div class="row col-md-offset-11 col-md-2 hidden-xs hidden-sm active"  >
+        <a href="<?php echo base_url()?>index.php/logout"><button class="btn-color-signout btn-sm btn-warning" id="logout_btn">Sign Out</button></a>
+    </div>
         <header class="row all-header">
             <?php if($is_login == true){?>
-            <div class="col-md-offset-11 col-md-2 hidden-xs hidden-sm active"  >
-                    <a href="<?php echo base_url()?>index.php/logout"><button class="btn-sm btn-warning" id="logout_btn">Sign Out</button></a>
-            </div>
             <?php }?>
             <div class="col-xs-12 col-sm-12 col-md-3<?php if($LANGUAGE == "fa")echo "col-md-push-9";?>">
                 <a href="<?php echo base_url();?>">
@@ -68,6 +68,7 @@
                 <?php echo $website_header;?>
             </div>
     </header>
+
 
 <?php
     if($is_login == TRUE)

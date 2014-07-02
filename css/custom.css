@@ -6,6 +6,8 @@
     font-size: 50px;
     color: #0D4383;
     text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;
+    padding-top: 45px;
+
 }
 
 .all-header
@@ -88,17 +90,15 @@ footer
     }
 }
 
-@media(max-height: 650px)
+
+footer
 {
-    footer
-    {
-        position:relative;
-        height:100px;
-        bottom:0px;
-        left:0px;
-        right:0px;
-        margin-bottom:0px;
-    }
+    position:relative;
+    height:100px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    margin-bottom:0px;
 }
 
 .height_box
@@ -152,8 +152,8 @@ footer
 }
 
 .nav-tabs > li > a:hover {
-    border-color: #515b99;
-    background-color: #9fbbee;
+    border-color: #79aee4;
+    background-color: #79aee4;
 }
 
 .nav-tabs > li > a {
@@ -166,7 +166,7 @@ footer
     color: #accbdd;
     font-size: 14px;
     font-weight: bold;
-    background-color: #547c99;
+    background-color: #3388df;
 }
 
 .btn-time
@@ -174,10 +174,67 @@ footer
     display: block;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 150px;
+
 }
 
 .tab-elements
 {
-    background-color: #547c99;
-    padding-bottom: 10px;
+    background-color: #3388df;
+    padding-bottom: 30px;
+}
+
+.btn-primary
+{
+    color: #3BB909;
+    background-color: #b1f6cb;
+    border-color: #00d38c;
+}
+
+.btn-primary:hover,
+.btn-primary:focus
+{
+    background-color: #00d38c;
+    border-color: #00d38c;
+}
+
+.btn-color-signout
+{
+    color: #edf3f4;
+    background-color: #2769ac;
+    border-color: #4587ca;
+}
+
+.btn-color-signout:hover,
+.btn-color-signout:focus
+{
+    background-color: #69c5e5;
+    border-color:  #2769ac;
+}
+.btn-default
+{
+    color: #206506;
+    background-color: #ebfdd4;
+    border-color: #f6fffd;
+}
+
+.btn-default:hover,
+.btn-default:focus
+{
+    background-color: #f6fffd;
+    border-color: #ebfdd4;
+}
+
+.bottom-line
+{
+    border-bottom: 10px solid #c1272c;
+    margin-bottom: 20px ;
+}
+.log-time-environment
+{
+       padding-top: 150px;
+}
+.footer-space
+{
+    margin-top: 10px;
 }

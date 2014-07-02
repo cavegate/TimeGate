@@ -6,6 +6,10 @@
  * Time: 3:39 PM
  */ ?>
 </div>
+<script src="<?php echo base_url();?>js/register.js"></script>
+<div class="col-xs-push-1 col-xs-10 bottom-line">
+</div>
+
 <div class="container">
     <div class="row header_bottom_border">
         <ul class="nav nav-tabs col-lg-3">

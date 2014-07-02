@@ -8,8 +8,9 @@
  */
 
  ?>
+
 <div class="row">
-    <div class="center tab-elements">
+    <div class="center tab-elements log-time-environment">
         <button type="submit" class="btn btn-danger btn-lg btn-time"  onclick="">SET TIME!</button>
     </div>
 </div>
