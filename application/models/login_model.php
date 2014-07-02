@@ -8,19 +8,16 @@
 
 class Login_model extends CI_Model
 {
-    /**
+    /*
      * Checks for the login status whether the username password are valid or not
-     * @param $username
-     * @param $password
+     * @param $Username
+     * @param $Password
      * @return bool|resource
      */
-    public static function checkLogin($username, $password)
+    public static function checkLogin($username, $password,$con)
     {
-        $queryString = "select * from users where username = '$username' and password = '$password'";
-        //echo $queryString."<br/>";
-        $result = mysql_query($queryString);
-        //print_r($result);
-        if(count($result)>0)
+        $result = $con->get_where('users',array('username' => $username , 'password' => $password));
+        if($result->num_rows>0)
             return $result;
         else
             return false;

@@ -1,4 +1,4 @@
-.headerTitle
+.header-title
 {
     padding-left: 50px; /* The padding is just there to move the h1 element to the center of the div */
     padding-top: 17px;
@@ -6,9 +6,11 @@
     font-size: 50px;
     color: #0D4383;
     text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;
+    padding-top: 45px;
+
 }
 
-.allHeader
+.all-header
 {
     padding-bottom: 5px;
 }
@@ -48,7 +50,7 @@ footer
     font-weight: bold;
 }
 
-.middleForm
+.middle-form
 {
     text-align: center;
     margin-top: 15px;
@@ -88,15 +90,151 @@ footer
     }
 }
 
-@media(max-height: 650px)
+
+footer
 {
-    footer
+    position:relative;
+    height:100px;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    margin-bottom:0px;
+}
+
+.height_box
+{
+    margin-top: 10px;
+}
+
+@media (max-width: 765px) {
+    .pad_bottom /* todo: make the look better*/
     {
-        position:relative;
-        height:100px;
-        bottom:0px;
-        left:0px;
-        right:0px;
-        margin-bottom:0px;
+        margin-left: 30%;
+        margin-right: 20%;
     }
+}
+
+@media (min-width: 766px) {
+    .pad_bottom
+    {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+}
+
+@media (min-width: 990px) and (max-width:1200px) {
+    .pad_bottom
+    {
+        margin-left: 13%;
+        margin-right: 20%;
+    }
+}
+
+.error_notif{
+    color: #a73639;/*todo: change the font*/
+    font-size: 16px;
+    margin-top: 14px;
+    font-family:  'b homa', 'titr', 'aradKodak', 'b koodak', 'arial';
+}
+
+.nav-tabs
+{
+    width: 500px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.nav-tabs > li
+{
+    text-align: center;
+    width: 150px;
+    color: black;
+}
+
+.nav-tabs > li > a:hover {
+    border-color: #79aee4;
+    background-color: #79aee4;
+}
+
+.nav-tabs > li > a {
+    color: blue;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    color: #accbdd;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #3388df;
+}
+
+.btn-time
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 150px;
+
+}
+
+.tab-elements
+{
+    background-color: #3388df;
+    padding-bottom: 30px;
+}
+
+.btn-primary
+{
+    color: #3BB909;
+    background-color: #b1f6cb;
+    border-color: #00d38c;
+}
+
+.btn-primary:hover,
+.btn-primary:focus
+{
+    background-color: #00d38c;
+    border-color: #00d38c;
+}
+
+.btn-color-signout
+{
+    color: #edf3f4;
+    background-color: #2769ac;
+    border-color: #4587ca;
+}
+
+.btn-color-signout:hover,
+.btn-color-signout:focus
+{
+    background-color: #69c5e5;
+    border-color:  #2769ac;
+}
+.btn-default
+{
+    color: #206506;
+    background-color: #ebfdd4;
+    border-color: #f6fffd;
+}
+
+.btn-default:hover,
+.btn-default:focus
+{
+    background-color: #f6fffd;
+    border-color: #ebfdd4;
+}
+
+.bottom-line
+{
+    border-bottom: 10px solid #c1272c;
+    margin-bottom: 20px ;
+}
+.log-time-environment
+{
+    padding-top: 150px;
+}
+.footer-space
+{
+    margin-top: 10px;
 }

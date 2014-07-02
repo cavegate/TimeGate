@@ -31,19 +31,20 @@
 
 <!--css starts form here-->
     <link rel="stylesheet" href="<?php echo base_url();?>css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="<?php echo base_url();?>css/bootstrap.css" type="text/css">
     <link rel="stylesheet" href="<?php echo base_url();?>css/custom.css" type="text/css"/>
     <link rel="stylesheet" href="<?php echo base_url();?>css/register.css" type="text/css"/>
     <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <!--<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script> -->
+    <!--[endif]-->
 
 
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <!--<script src="http://code.jquery.com/jquery-latest.js"></script>-->
+    <script src="<?php echo base_url();?>js/jquery-1.8.2.min.js"></script>
     <script src="<?php echo base_url();?>js/jquery.prettyPhoto.js"></script>
     <script src="<?php echo base_url();?>js/jquery.custom.js"></script>
-    <script src="<?php echo base_url();?>js/jquery-1.8.2.min.js"></script>
     <script src="<?php echo base_url();?>js/price.js"></script>
-
+    <script src="<?php echo base_url();?>js/register.js"></script>
 
 </head>
 <body>
@@ -52,15 +53,22 @@
 <div class="visible-md">medium</div>
 <div class="visible-lg">large</div>
 <div class="container">
-    <header class="row allHeader">
-        <div class="col-xs-12 col-sm-12 col-md-3<?php if($LANGUAGE == "fa")echo "col-md-push-9";?>">
-            <a href="<?php echo base_url();?>">
-                <img class="img-responsive" src="<?php echo base_url();?>img/logo-original<?php if($LANGUAGE == "fa")echo "-farsi";?>.png" alt="TimeGate Logo"/>
-            </a>
-        </div>
-        <div class="headerTitle hidden-xs hidden-sm col-md-9 <?php if($LANGUAGE == "fa")echo "col-md-pull-3";?>">
-            <?php echo $website_header;?>
-        </div>
+    <div class="row col-md-offset-11 col-md-2 hidden-xs hidden-sm active"  >
+        <?php if($is_login == true){?>
+            <a href="<?php echo base_url()?>index.php/login/logout"><button class="btn-color-signout btn-sm btn-warning" id="logout_btn">Sign Out</button></a>
+        <?php }?>
+
+    </div>
+        <header class="row all-header">
+
+            <div class="col-xs-12 col-sm-12 col-md-3<?php if($LANGUAGE == "fa")echo "col-md-push-9";?>">
+                <a href="<?php echo base_url();?>">
+                    <img class="img-responsive" src="<?php echo base_url();?>img/logo-original<?php if($LANGUAGE == "fa")echo "-farsi";?>.png" alt="TimeGate Logo"/>
+                </a>
+            </div>
+            <div class="header-title hidden-xs hidden-sm col-md-9 <?php if($LANGUAGE == "fa")echo "col-md-pull-3";?>">
+                <?php echo $website_header;?>
+            </div>
     </header>
 
 <?php

@@ -29,7 +29,7 @@ class Login extends CI_Controller {
                 "header_meta_description" => $this->lang->line("login_header_meta_description"),
                 "title" => $this->lang->line("login_title"),
                 "website_header" => $this->lang->line("website_header"),
-                "is_login" => TRUE,
+                "is_login" => False,
                 "LANGUAGE" => LANGUAGE
             );
             $this->load->view('header',$headerPassedArray);
@@ -39,24 +39,49 @@ class Login extends CI_Controller {
         else
         {
             $this->load->helper('url');
-            redirect('/welcome/','refresh');
+            redirect('/dashboard/','refresh');
         }
     }
-
-    function checklogin()
+    function logout()
+    {
+        $this->load->helper('url');
+        $this->load->library('session');
+        $data = array(
+            'username' => "",
+            'full_name' => "",
+            'email' => ""
+        );
+        $this->session->unset_userdata($data);
+        redirect('/login/','refresh');
+    }
+    function checkLogin()
     {
         $this->load->model('login_model');
         $this->load->library('encrypt');
-        echo $this->input->post('password')."<br/>";
-        $encryptedPassword = $this->encrypt->encode($this->input->post('password'));
-        echo $encryptedPassword."<br/>";
-        $decodedPassword = $this->encrypt->decode($encryptedPassword);
-        echo $decodedPassword."<br/>";
-        $sha1Password = $this->encrypt->sha1($encryptedPassword);
-        echo $sha1Password."<br/>";
-        $result = $this->login_model->checkLogin($this->input->post('username'),$sha1Password);
-        print_r($result);
-        die;
+        $this->load->library('Hash');
+        $this->load->library('session');
+        $username = $this->input->post('username');
+        $password = $this->input->post('password');
+        $encryptedPassword = Hash::create('sha256',$password,$this->config->item('encryption_key'));
+        $encryptedPassword = $this->encrypt->sha1($encryptedPassword);
+        $result = $this->login_model->checkLogin($username,$encryptedPassword,$this->db);
+        if($result != false)
+        {
+            foreach($result->result() as $row)
+            {
+                $data = array(
+                    'username' => $row->username,
+                    'full_name' => $row->full_name,
+                    'email' => $row->email
+                );
+                $this->session->set_userdata($data);
+            }
+            echo "yes";
+        }
+        else
+        {
+            echo "no";
+        }
     }
 }
 
