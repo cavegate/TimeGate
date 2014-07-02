@@ -1,4 +1,4 @@
-.headerTitle
+.header-title
 {
     padding-left: 50px; /* The padding is just there to move the h1 element to the center of the div */
     padding-top: 17px;
@@ -8,7 +8,7 @@
     text-shadow: rgba(0,0,0,0.5) -1px 0, rgba(0,0,0,0.3) 0 -1px, rgba(255,255,255,0.5) 0 1px, rgba(0,0,0,0.3) -1px -2px;
 }
 
-.allHeader
+.all-header
 {
     padding-bottom: 5px;
 }
@@ -48,7 +48,7 @@ footer
     font-weight: bold;
 }
 
-.middleForm
+.middle-form
 {
     text-align: center;
     margin-top: 15px;
@@ -99,4 +99,85 @@ footer
         right:0px;
         margin-bottom:0px;
     }
+}
+
+.height_box
+{
+    margin-top: 10px;
+}
+
+@media (max-width: 765px) {
+    .pad_bottom /* todo: make the look better*/
+    {
+        margin-left: 30%;
+        margin-right: 20%;
+    }
+}
+
+@media (min-width: 766px) {
+    .pad_bottom
+    {
+        margin-left: 20%;
+        margin-right: 20%;
+    }
+}
+
+@media (min-width: 990px) and (max-width:1200px) {
+    .pad_bottom
+    {
+        margin-left: 13%;
+        margin-right: 20%;
+    }
+}
+
+.error_notif{
+    color: #a73639;/*todo: change the font*/
+    font-size: 16px;
+    margin-top: 14px;
+    font-family:  'b homa', 'titr', 'aradKodak', 'b koodak', 'arial';
+}
+
+.nav-tabs
+{
+    width: 500px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.nav-tabs > li
+{
+    text-align: center;
+    width: 150px;
+    color: black;
+}
+
+.nav-tabs > li > a:hover {
+    border-color: #515b99;
+    background-color: #9fbbee;
+}
+
+.nav-tabs > li > a {
+    color: blue;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    color: #accbdd;
+    font-size: 14px;
+    font-weight: bold;
+    background-color: #547c99;
+}
+
+.btn-time
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tab-elements
+{
+    background-color: #547c99;
+    padding-bottom: 10px;
 }

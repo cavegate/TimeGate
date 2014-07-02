@@ -48,21 +48,12 @@ class Register extends CI_Controller {
         $this->load->model("register_model");
         $this->load->library('encrypt');
         $this->load->library('Hash');
-
         $username = $this->input->post('username');
         $password = $this->input->post('password');
         $full_name = $this->input->post('full_name');
         $email = $this->input->post('email');
         $mobile = $this->input->post('mobile');
         $birth_date = $this->input->post('birth_date');
-        /*
-        $username = 'ehsan';
-        $password = 'ehsanh';
-        $full_name = 'ehsanh';
-        $email = 'a.aa.com';
-        $mobile = '87696';
-        $birth_date = '2014-01-01';
-        */
         $encryptedPassword = Hash::create('sha256',$password,$this->config->item('encryption_key'));
         $encryptedPassword = $this->encrypt->sha1($encryptedPassword);
         $mobile = preg_replace("/[^0-9,.]/", "", $mobile);
