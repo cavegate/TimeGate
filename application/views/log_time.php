@@ -10,7 +10,7 @@
  ?>
 
 <div class="row">
-    <div class="center tab-elements log-time-environment">
+    <div class="center tab-elements-log-time">
         <button type="submit" class="btn btn-danger btn-lg btn-time"  onclick="">SET TIME!</button>
     </div>
 </div>
