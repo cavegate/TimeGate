@@ -182,6 +182,16 @@ footer
 {
     background-color: #3388df;
     padding-bottom: 30px;
+    margin-left: 150px;
+    margin-right: 150px
+}
+.tab-elements-log-time
+{
+    padding-top: 150px;
+    background-color: #3388df;
+    padding-bottom: 30px;
+    margin-left: -70px;
+    margin-right: -70px
 }
 
 .btn-primary
@@ -230,10 +240,7 @@ footer
     border-bottom: 10px solid #c1272c;
     margin-bottom: 20px ;
 }
-.log-time-environment
-{
-       padding-top: 150px;
-}
+
 .footer-space
 {
     margin-top: 10px;
