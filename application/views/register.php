@@ -32,10 +32,21 @@
                     success:function(result){
                         if(result == "yes")
                         {
-                            alert("ثبت نام شما با موفقیت انجام شد.");
+                            notif({
+                                type: "success",
+                                msg: "Register is complete.",
+                                position: "right",
+                                fade: true
+                            });
+                            $("#registerForm").trigger("reset");
                         }
                         else{
-                            alert("شما قادر به ثبت نام نمی باشید.");
+                            notif({
+                                type: "error",
+                                msg: "Register is not complete, please try again.",
+                                position: "center"
+                            });
+                            $("#registerForm").trigger("reset");
                         }
                     },
                     beforeSend:function()
@@ -59,12 +70,11 @@
 
             var email = document.forms["registerForm"]["email"].value;
             if (email == null || email == "") {
-                document.getElementById("notification_email").innerHTML = "این فیلد نباید خالی باشد";
+                $("#email").notify("This field not be blank",{position:"right",className:"warn",autoHide: false,clickToHide: false,gap: 5});
                 check_register_validity = 0;
             }
             else
             {
-                document.getElementById("notification_email").innerHTML ="";
                 request = $.ajax({
                     url:"<?php echo base_url(); ?>index.php/register/check_email_validity",
                     type:"POST",
@@ -72,11 +82,11 @@
                     success:function(result){
                         if(result == "no")
                         {
-                            document.getElementById("notification_email").innerHTML = "ایمیل تکراری می باشد";
+                            $("#email").notify("this email was taken.",{position:"right",className:"warn",autoHide: false,clickToHide: false,gap: 5});
                             check_register_validity = 0;
                         }
                         else{
-                            $("#notification_email").val  = "";
+                            $("#email").notify("",{className:"success"});
                             check_register_validity = 0;
                         }
                     },
@@ -99,12 +109,11 @@
 
             var user = document.forms["registerForm"]["username"].value;
             if (user == null || user == "") {
-                document.getElementById("notification_username").innerHTML = "این فیلد نباید خالی باشد";
+                $("#username").notify("This field not be blank",{position:"right",className:"warn",autoHide: false,clickToHide: false,gap: 5});
                 check_register_validity = 0;
             }
             else
             {
-                document.getElementById("notification_username").innerHTML ="";
                 request = $.ajax({
                     url:"<?php echo base_url(); ?>index.php/register/check_username_validity",
                     type:"POST",
@@ -112,11 +121,11 @@
                     success:function(result){
                         if(result == "no")
                         {
-                            document.getElementById("notification_username").innerHTML = "نام کاربری تکراری میباشد";
+                            $("#username").notify("This username was taken.",{position:"right",className:"warn",autoHide: false,clickToHide: false,gap: 5});
                             check_register_validity = 0;
                         }
                         else{
-                            $("#notification_username").val  = "";
+                            $("#username").notify("",{className:"success"});
                             check_register_validity = 0;
                         }
                     },
@@ -135,49 +144,42 @@
 </script>
 </div>
 <div class="row">
-    <form  name= "registerForm" class="tab-elements" method="post" action="<?php echo base_url();?>index.php/register">
+    <form  name= "registerForm" id="registerForm" class="tab-elements" method="post" action="<?php echo base_url();?>index.php/register">
         <div class="row form-group">
             <div class="col-xs-offset-1 col-md-offset-4 col-sm-offset-3 col-sm-6 col-lg-4 col-md-4 col-xs-10">
-                <input type="name" name="full_name"  class="form-control height_box" onblur="validateForm_fullname()" placeholder="Write full name">
+                <input type="name" id="full_name" name="full_name"  class="form-control height_box" onblur="validateForm_fullname()" placeholder="Write full name">
             </div>
-            <p class= "error_notif" id="notification_fullname"></p>
         </div>
         <div class="row form-group">
             <div class="col-xs-offset-1 col-md-offset-4 col-sm-offset-3 col-sm-6 col-lg-4 col-md-4 col-xs-10">
                 <input type="name" name="username" id = "username" class="form-control height_box" placeholder="Write username">
             </div>
-            <p class= "error_notif" id="notification_username"></p>
         </div>
         <div class="row form-group">
             <div class="col-xs-offset-1 col-md-offset-4 col-sm-offset-3 col-sm-6 col-lg-4 col-md-4 col-xs-10">
-                <input type="password" name="password" class="form-control height_box" onblur="validateForm_password()" placeholder="Write password">
+                <input type="password" id="password" name="password" class="form-control height_box" onblur="validateForm_password()" placeholder="Write password">
             </div>
-            <p class= "error_notif" id="notification_password"></p>
         </div>
         <div class="row form-group">
             <div class="col-xs-offset-1 col-md-offset-4 col-sm-offset-3 col-sm-6 col-lg-4 col-md-4 col-xs-10">
-                <input type="password" name="conf_password" class="form-control height_box" onblur="validateForm_conf_password()" placeholder="Write confirmation password">
+                <input type="password" id = "conf_password" name="conf_password" class="form-control height_box" onblur="validateForm_conf_password()" placeholder="Write confirmation password">
             </div>
-            <p class= "error_notif" id="notification_conf_password"></p>
         </div>
         <div class="row form-group">
             <div class="col-xs-offset-1 col-md-offset-4 col-sm-offset-3 col-sm-6 col-lg-4 col-md-4 col-xs-10">
                 <input type="email" id="email" name="email" class="form-control height_box" placeholder="Write email">
             </div>
-            <p class= "error_notif" id="notification_email"></p>
         </div>
         <div class="row form-group">
             <div class="col-xs-offset-1 col-md-offset-4 col-sm-offset-3 col-sm-6 col-lg-4 col-md-4 col-xs-10">
-                <input name = "mobile" class="form-control height_box" onblur="validateForm_mobile()" placeholder="Write mobile">
+                <input name = "mobile" id="mobile" class="form-control height_box" onblur="validateForm_mobile()" placeholder="Write mobile">
             </div>
-            <p class= "error_notif" id="notification_mobile"></p>
         </div>
 
         <div class="row form-group">
             <div class="col-xs-offset-1 col-md-offset-4 col-sm-offset-3 col-sm-6 col-lg-4 col-md-4 col-xs-10">
-                <input type="date" name = "birth_date" class="form-control height_box" onblur="validateForm_date()" placeholder="Write birthday">
+                <input type="date" id="birth_date" name = "birth_date" class="form-control height_box" onblur="validateForm_date()" placeholder="Write birthday">
             </div>
-            <p class= "error_notif" id="notification_date"></p>
         </div>
         <div class="row">
             <div class="col-xs-offset-1 col-md-offset-4 col-sm-offset-3 col-sm-6 col-lg-4 col-md-4 col-xs-10">

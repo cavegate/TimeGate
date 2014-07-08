@@ -49,7 +49,8 @@ class Login extends CI_Controller {
         $data = array(
             'username' => "",
             'full_name' => "",
-            'email' => ""
+            'email' => "",
+            'personal_id' => ""
         );
         $this->session->unset_userdata($data);
         redirect('/login/','refresh');
@@ -72,7 +73,8 @@ class Login extends CI_Controller {
                 $data = array(
                     'username' => $row->username,
                     'full_name' => $row->full_name,
-                    'email' => $row->email
+                    'email' => $row->email,
+                    'personal_id' => $row->personal_id
                 );
                 $this->session->set_userdata($data);
             }

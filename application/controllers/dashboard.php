@@ -43,8 +43,8 @@ class Dashboard extends CI_Controller {
 
         $this->load->library('session');
         $username = $this->session->userdata('username');
-        /*if($username == true)
-        {*/
+        if($username == true)
+        {
             $this->load->helper('url');
             if(LANGUAGE == "en")
                 $this->lang->load('en','english');
@@ -62,18 +62,19 @@ class Dashboard extends CI_Controller {
                 "isLoggedTimes" => false,
                 "isProfile" => false,
                 "isMyUsers" => false,
-                "isRegisterUsers" => false
+                "isRegisterUsers" => false,
+                "isAdmin" => $username=='admin'?true:false
             );
             $this->load->view('header',$headerPassedArray);
             $this->load->view('navbar',$dashboardPassedArray);
             $this->load->view('log_time');
             $this->load->view('footer');
-        /*}
+        }
         else
         {
             $this->load->helper('url');
             redirect('/login/','refresh');
-        }*/
+        }
     }
 
     /**
@@ -130,7 +131,20 @@ class Dashboard extends CI_Controller {
     }
     public function setChange()
     {
-        $this->changeWorkingStatus(false);
+        $isManually = $this->input->get('isManually');
+        if($isManually == 'false')
+        {
+            $result = $this->changeWorkingStatus(false);
+            if($result)
+                echo "yes";
+            else
+                echo "no";
+        }
+
+        else
+        {
+
+        }
     }
 
     /*
@@ -155,12 +169,9 @@ class Dashboard extends CI_Controller {
             if($this->calculateLoginStatus())
             {
                 $this->load->helper('date');
-                $datestring = "%Y-%m-%d %H:%i:%s";
-                $time = time();
-                $datetime = mdate($datestring, $time);
-                echo($datetime);
                 $this->load->model('dashboard_model');
                 $this->load->library('session');
+                $datetime = date('Y-m-d H:i:s', strtotime('-1 hour'));
                 $personal_id = $this->session->userdata('personal_id');
                 $out_or_in = $this->calculateLastLoginStatus();
                 if($out_or_in == false)
@@ -174,6 +185,10 @@ class Dashboard extends CI_Controller {
                               'out_or_in' => $out_or_in);
                 $this->load->model('dashboard_model');
                 $res = $this->dashboard_model->setNewStatusTime($data,$this->db);
+                if($res)
+                    return true;
+                else
+                    return false;
 
             }
             else

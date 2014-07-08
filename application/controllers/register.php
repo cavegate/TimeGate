@@ -37,7 +37,8 @@ class Register extends CI_Controller {
             "isLoggedTimes" => false,
             "isProfile" => false,
             "isMyUsers" => false,
-            "isRegisterUsers" => true
+            "isRegisterUsers" => true,
+            "isAdmin" => true
         );
         $this->load->view('header',$headerPassedArray);
         $this->load->view('navbar',$dashboardPassedArray);

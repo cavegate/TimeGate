@@ -24,8 +24,11 @@ class Dashboard_model extends CI_Model
         }
         $stringquery = "SELECT * FROM  times WHERE DATETIME = ( SELECT MAX( DATETIME ) FROM times WHERE personal_id = ? )";
         $result = $con->query($stringquery,array($pid));
-        $sadjad = $result->result_array();
-        $in = $sadjad["0"]["out_or_in"];
+        if($result->num_rows > 0)
+        {
+            $sadjad = $result->result_array();
+            $in = $sadjad["0"]["out_or_in"];
+        }
         // '1' == login, '0' == logout
         return $in;
     }
@@ -38,6 +41,7 @@ class Dashboard_model extends CI_Model
     public static function setNewStatusTime($insertArray,$con)
     {
         //Todo: insert the login status to the database
-        $con->insert('times',$insertArray);
+        $res = $con->insert('times',$insertArray);
+        return $res;
     }
 }

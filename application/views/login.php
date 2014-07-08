@@ -23,7 +23,13 @@
                 success:function(result){
                     if(result == "no")
                     {
-                        document.getElementById("login_notif").innerHTML = "نام کاربری / رمز عبور اشتباه می باشد";
+                        notif({
+                            type: "error",
+                            msg: "Your Username/password is wrong. Please try again.",
+                            position: "center",
+                            width: 500,
+                            height: 60
+                        });
                     }
                     else{
                         window.location.href = "<?php echo base_url(); ?>index.php/dashboard";

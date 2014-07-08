@@ -26,8 +26,10 @@
                 <a href="<?php echo base_url();?>index.php/myUsers">My Users</a>
             </li>
             <?php  } ?>
+            <?php if ($isAdmin == true){ ?>
             <li <?php echo $isRegisterUsers?'class="active"':"" ?>>
                 <a href="<?php echo base_url();?>index.php/register">Register Users</a>
             </li>
+            <?php } ?>
         </ul>
     </div>
