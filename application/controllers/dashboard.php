@@ -43,8 +43,8 @@ class Dashboard extends CI_Controller {
 
         $this->load->library('session');
         $username = $this->session->userdata('username');
-        if($username == true)
-        {
+        /*if($username == true)
+        {*/
             $this->load->helper('url');
             if(LANGUAGE == "en")
                 $this->lang->load('en','english');
@@ -68,12 +68,12 @@ class Dashboard extends CI_Controller {
             $this->load->view('navbar',$dashboardPassedArray);
             $this->load->view('log_time');
             $this->load->view('footer');
-        }
+        /*}
         else
         {
             $this->load->helper('url');
             redirect('/login/','refresh');
-        }
+        }*/
     }
 
     /**
