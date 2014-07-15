@@ -40,8 +40,8 @@ class Register_model extends CI_Model
             'mobile' => $mobile,
             'email' => $email
         );
-        $con->insert('users',$data);
-        if($con)
+        $result = $con->insert('users',$data);
+        if($result)
             return true;
         else
             return false;

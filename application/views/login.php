@@ -32,7 +32,17 @@
                         });
                     }
                     else{
-                        window.location.href = "<?php echo base_url(); ?>index.php/dashboard";
+                        notif({
+                            type: "success",
+                            msg: "Login successfully.",
+                            position: "center",
+                            width: 500,
+                            height: 60
+                        });
+                        setTimeout(function(){
+                            window.location.href = "<?php echo base_url(); ?>index.php/dashboard";
+                        },2000)
+
                     }
                 },
                 beforeSend:function()
